@@ -212,6 +212,35 @@
         to { opacity: 1; transform: translateY(0); }
       }
 
+      /* Sub-tabs inside Letters */
+      .sub-tab {
+        background: white;
+        color: #b76e79;
+        border: 1.5px solid #f9e4e4;
+        font-size: 0.75rem;
+        padding: 6px 16px;
+        border-radius: 9999px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 600;
+      }
+      .sub-tab.active {
+        background: linear-gradient(135deg, #b76e79, #e8a0a0);
+        color: white;
+        border-color: transparent;
+        box-shadow: 0 2px 10px rgba(183, 110, 121, 0.25);
+      }
+      .sub-tab:not(.active):hover {
+        background: #fde8e8;
+        border-color: #e8a0a0;
+      }
+      .letter-subgroup {
+        animation: fadeInGroup 0.3s ease;
+      }
+      .letter-subgroup.hidden {
+        display: none;
+      }
+
       /* Checklist styles */
       .checklist-checkbox {
         appearance: none;
@@ -420,24 +449,10 @@
       <div class="flex justify-center flex-wrap gap-3 sm:gap-4" id="categoryTabs">
         <button
           class="category-tab active font-body font-semibold text-sm sm:text-base px-5 sm:px-8 py-3 rounded-full transition-all duration-300 shadow-md"
-          data-category="monthsary"
-          onclick="switchCategory('monthsary')"
+          data-category="letters"
+          onclick="switchCategory('letters')"
         >
-          Monthsary Letters
-        </button>
-        <button
-          class="category-tab font-body font-semibold text-sm sm:text-base px-5 sm:px-8 py-3 rounded-full transition-all duration-300 shadow-md"
-          data-category="girlfriends"
-          onclick="switchCategory('girlfriends')"
-        >
-          Girlfriends Day Letters
-        </button>
-        <button
-          class="category-tab font-body font-semibold text-sm sm:text-base px-5 sm:px-8 py-3 rounded-full transition-all duration-300 shadow-md"
-          data-category="anniversary"
-          onclick="switchCategory('anniversary')"
-        >
-          Anniversary Letters
+          Letters
         </button>
         <button
           class="category-tab font-body font-semibold text-sm sm:text-base px-5 sm:px-8 py-3 rounded-full transition-all duration-300 shadow-md"
@@ -445,13 +460,6 @@
           onclick="switchCategory('bucketlist')"
         >
           Anniversary Bucketlist
-        </button>
-        <button
-          class="category-tab font-body font-semibold text-sm sm:text-base px-5 sm:px-8 py-3 rounded-full transition-all duration-300 shadow-md"
-          data-category="letters"
-          onclick="switchCategory('letters')"
-        >
-          Other Letters
         </button>
         <button
           class="category-tab font-body font-semibold text-sm sm:text-base px-5 sm:px-8 py-3 rounded-full transition-all duration-300 shadow-md"
@@ -466,8 +474,19 @@
     <!-- Folders Section -->
     <section class="relative z-10 max-w-2xl mx-auto px-4 pb-32 pt-8">
 
-      <!-- Monthsary Letters Group -->
-      <div class="folder-group" id="group-monthsary">
+      <!-- Letters Group (contains sub-tabs) -->
+      <div class="folder-group" id="group-letters">
+
+        <!-- Sub-tab bar -->
+        <div class="flex justify-center flex-wrap gap-2 mb-6">
+          <button class="sub-tab active font-body" data-sub="monthsary" onclick="switchSubCategory('monthsary')">Monthsary</button>
+          <button class="sub-tab font-body" data-sub="girlfriends" onclick="switchSubCategory('girlfriends')">Girlfriends Day</button>
+          <button class="sub-tab font-body" data-sub="anniversary" onclick="switchSubCategory('anniversary')">Anniversary</button>
+          <button class="sub-tab font-body" data-sub="other" onclick="switchSubCategory('other')">Other Letters</button>
+        </div>
+
+        <!-- Monthsary sub-group -->
+        <div class="letter-subgroup" data-sub="monthsary">
         <div class="space-y-6">
 
           <!-- 1st Monthsary -->
@@ -737,10 +756,103 @@
           </div>
 
         </div>
-      </div>
+        </div>
 
-      <!-- Other Letters Group (hidden by default) -->
-      <div class="folder-group hidden" id="group-letters">
+        <!-- Girlfriends Day sub-group -->
+        <div class="letter-subgroup hidden" data-sub="girlfriends">
+        <div class="space-y-6">
+
+          <!-- 1st Girlfriends Day -->
+          <div class="folder folder-color-5" data-delay="0">
+            <div
+              class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
+              onclick="toggleDrawer(this)"
+            >
+              <div class="flex items-center gap-4 min-w-0">
+                <div class="folder-number">1</div>
+                <div class="min-w-0">
+                  <h3 class="font-body font-bold text-wine text-base sm:text-lg truncate">
+                    1st Girlfriends Day
+                  </h3>
+                  <p class="text-wine/50 text-xs sm:text-sm truncate"></p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 flex-shrink-0">
+                <span class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+                  Girlfriends Day
+                </span>
+                <svg class="chevron w-5 h-5 text-wine/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </div>
+            </div>
+            <div class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner">
+              <div class="p-5">
+                <a
+                  href="https://sejey0.github.io/1st_Girlfriends_Day/"
+                  class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Open Letter &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        </div>
+
+        <!-- Anniversary sub-group -->
+        <div class="letter-subgroup hidden" data-sub="anniversary">
+        <div class="space-y-6">
+
+          <!-- 1st Anniversary -->
+          <div class="folder folder-color-1" data-delay="0">
+            <div
+              class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
+              onclick="toggleDrawer(this)"
+            >
+              <div class="flex items-center gap-4 min-w-0">
+                <div class="folder-number">1</div>
+                <div class="min-w-0">
+                  <h3 class="font-body font-bold text-wine text-base sm:text-lg truncate">
+                    1st Anniversary
+                  </h3>
+                  <p class="text-wine/50 text-xs sm:text-sm truncate">"Happy 1st Anniversary lovelove"</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 flex-shrink-0">
+                <span class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+                  1 Year
+                </span>
+                <svg class="chevron w-5 h-5 text-wine/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </div>
+            </div>
+            <div class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner">
+              <div class="p-5">
+                <p class="text-wine/60 text-sm leading-relaxed mb-4">
+                  One whole year of us. 365 days of love, and this is only the beginning.
+                </p>
+                <a
+                  href="#"
+                  class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Open Letter &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        </div>
+
+        <!-- Other Letters sub-group -->
+        <div class="letter-subgroup hidden" data-sub="other">
         <div class="space-y-6">
 
           <!-- 1st Letter -->
@@ -820,98 +932,8 @@
           </div>
 
         </div>
-      </div>
-
-      <!-- Girlfriends Day Group (hidden by default) -->
-      <div class="folder-group hidden" id="group-girlfriends">
-        <div class="space-y-6">
-
-          <!-- 1st Girlfriends Day -->
-          <div class="folder folder-color-5" data-delay="0">
-            <div
-              class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
-              onclick="toggleDrawer(this)"
-            >
-              <div class="flex items-center gap-4 min-w-0">
-                <div class="folder-number">1</div>
-                <div class="min-w-0">
-                  <h3 class="font-body font-bold text-wine text-base sm:text-lg truncate">
-                    1st Girlfriends Day
-                  </h3>
-                  <p class="text-wine/50 text-xs sm:text-sm truncate"></p>
-                </div>
-              </div>
-              <div class="flex items-center gap-3 flex-shrink-0">
-                <span class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
-                  Girlfriends Day
-                </span>
-                <svg class="chevron w-5 h-5 text-wine/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </div>
-            </div>
-            <div class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner">
-              <div class="p-5">
-                <a
-                  href="https://sejey0.github.io/1st_Girlfriends_Day/"
-                  class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Open Letter &rarr;
-                </a>
-              </div>
-            </div>
-          </div>
-
-
         </div>
-      </div>
-      <div class="folder-group hidden" id="group-anniversary">
-        <div class="space-y-6">
 
-          <!-- 1st Anniversary -->
-          <div class="folder folder-color-1" data-delay="0">
-            <div
-              class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
-              onclick="toggleDrawer(this)"
-            >
-              <div class="flex items-center gap-4 min-w-0">
-                <div class="folder-number">1</div>
-                <div class="min-w-0">
-                  <h3 class="font-body font-bold text-wine text-base sm:text-lg truncate">
-                    1st Anniversary
-                  </h3>
-                  <p class="text-wine/50 text-xs sm:text-sm truncate">"Happy 1st Anniversary lovelove"</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-3 flex-shrink-0">
-                <span class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
-                  1 Year
-                </span>
-                <svg class="chevron w-5 h-5 text-wine/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </div>
-            </div>
-            <div class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner">
-              <div class="p-5">
-                <p class="text-wine/60 text-sm leading-relaxed mb-4">
-                  One whole year of us. 365 days of love, and this is only the beginning.
-                </p>
-                <a
-                  href="#"
-                  class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Open Letter &rarr;
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
       </div>
 
       <!-- Anniversary Bucketlist Group (hidden by default) -->
@@ -1143,7 +1165,7 @@
         var isOpen = drawer.classList.contains("open");
 
         // Close all other drawers in the same group
-        var group = folder.closest(".folder-group");
+        var group = folder.closest(".letter-subgroup") || folder.closest(".folder-group");
         group.querySelectorAll(".drawer-content.open").forEach(function (d) {
           if (d !== drawer) {
             d.classList.remove("open");
@@ -1188,12 +1210,52 @@
         var activeGroup = document.getElementById("group-" + category);
         activeGroup.classList.remove("hidden");
 
+        // Reset sub-tabs to first when switching to letters
+        if (category === "letters") {
+          switchSubCategory("monthsary");
+          return;
+        }
+
         // Re-trigger folder entrance animations
         activeGroup.querySelectorAll(".folder").forEach(function (folder) {
           folder.classList.remove("visible");
         });
         setTimeout(function () {
           animateFoldersInGroup(activeGroup);
+        }, 50);
+      }
+
+      // Switch between letter sub-categories
+      function switchSubCategory(sub) {
+        // Update sub-tab active states
+        document.querySelectorAll(".sub-tab").forEach(function (tab) {
+          if (tab.dataset.sub === sub) {
+            tab.classList.add("active");
+          } else {
+            tab.classList.remove("active");
+          }
+        });
+
+        // Close all open drawers
+        document.querySelectorAll("#group-letters .drawer-content.open").forEach(function (d) {
+          d.classList.remove("open");
+          d.parentElement.querySelector(".chevron").classList.remove("rotated");
+        });
+
+        // Show/hide sub-groups
+        document.querySelectorAll(".letter-subgroup").forEach(function (sg) {
+          sg.classList.add("hidden");
+        });
+
+        var activeSub = document.querySelector('.letter-subgroup[data-sub="' + sub + '"]');
+        activeSub.classList.remove("hidden");
+
+        // Re-trigger folder entrance animations
+        activeSub.querySelectorAll(".folder").forEach(function (folder) {
+          folder.classList.remove("visible");
+        });
+        setTimeout(function () {
+          animateFoldersInGroup(activeSub);
         }, 50);
       }
 
