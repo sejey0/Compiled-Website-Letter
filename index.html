@@ -290,43 +290,73 @@
         opacity: 0.5;
       }
 
-      /* Gallery grid */
+      /* Gallery carousel */
       .gallery-grid {
-        columns: 2;
-        column-gap: 12px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 300px;
       }
       @media (min-width: 640px) {
         .gallery-grid {
-          columns: 3;
-          column-gap: 16px;
+          min-height: 420px;
         }
       }
       .gallery-card {
-        break-inside: avoid;
-        margin-bottom: 12px;
+        display: none;
         border-radius: 12px;
         overflow: hidden;
         cursor: pointer;
-        position: relative;
-        box-shadow: 0 2px 10px rgba(183, 110, 121, 0.15);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 20px rgba(183, 110, 121, 0.2);
+        transition: opacity 0.4s ease;
+        max-width: 100%;
       }
-      @media (min-width: 640px) {
-        .gallery-card {
-          margin-bottom: 16px;
-        }
-      }
-      .gallery-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 25px rgba(183, 110, 121, 0.3);
+      .gallery-card.active-slide {
+        display: block;
       }
       .gallery-card img {
-        width: 100%;
+        max-width: 100%;
+        max-height: 65vh;
+        object-fit: contain;
         display: block;
-        transition: transform 0.4s ease;
+        margin: 0 auto;
       }
-      .gallery-card:hover img {
-        transform: scale(1.05);
+      .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #b76e79, #e8a0a0);
+        color: white;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(183, 110, 121, 0.3);
+        transition: all 0.3s ease;
+        z-index: 5;
+      }
+      .carousel-arrow:hover {
+        transform: translateY(-50%) scale(1.1);
+        box-shadow: 0 4px 15px rgba(183, 110, 121, 0.5);
+      }
+      .carousel-arrow.left { left: -8px; }
+      .carousel-arrow.right { right: -8px; }
+      @media (min-width: 640px) {
+        .carousel-arrow.left { left: -16px; }
+        .carousel-arrow.right { right: -16px; }
+      }
+      .carousel-counter {
+        text-align: center;
+        margin-top: 12px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #b76e79;
       }
       .gallery-caption {
         position: absolute;
@@ -991,16 +1021,20 @@
         <!-- 1st Image Together gallery sub-group -->
         <div class="gallery-subgroup" data-gallerysub="gal-1st">
         <div class="gallery-grid">
-          <div class="gallery-card" onclick="openLightbox(this)">
+          <button class="carousel-arrow left" onclick="carouselNav(this, -1)">&#8249;</button>
+          <div class="gallery-card active-slide" onclick="openLightbox(this)">
             <img src="images/1st Image Together/1000019984.jpg" alt="1st Image Together" />
           </div>
+          <button class="carousel-arrow right" onclick="carouselNav(this, 1)">&#8250;</button>
         </div>
+        <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">1</span></div>
         </div>
 
         <!-- Bataan gallery sub-group -->
         <div class="gallery-subgroup hidden" data-gallerysub="gal-bataan">
         <div class="gallery-grid">
-          <div class="gallery-card" onclick="openLightbox(this)">
+          <button class="carousel-arrow left" onclick="carouselNav(this, -1)">&#8249;</button>
+          <div class="gallery-card active-slide" onclick="openLightbox(this)">
             <img src="images/Bataan/IMG_20251014_150357_935 (1).jpg" alt="Bataan" />
           </div>
           <div class="gallery-card" onclick="openLightbox(this)">
@@ -1162,13 +1196,16 @@
           <div class="gallery-card" onclick="openLightbox(this)">
             <img src="images/Bataan/pm_1768128401211_cmp.jpg" alt="Bataan" />
           </div>
+          <button class="carousel-arrow right" onclick="carouselNav(this, 1)">&#8250;</button>
         </div>
+        <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">54</span></div>
         </div>
 
         <!-- Manaoag gallery sub-group -->
         <div class="gallery-subgroup hidden" data-gallerysub="gal-manaoag">
         <div class="gallery-grid">
-          <div class="gallery-card" onclick="openLightbox(this)">
+          <button class="carousel-arrow left" onclick="carouselNav(this, -1)">&#8249;</button>
+          <div class="gallery-card active-slide" onclick="openLightbox(this)">
             <img src="images/Manaoag/pm_1768128416038_cmp.jpg" alt="Manaoag" />
           </div>
           <div class="gallery-card" onclick="openLightbox(this)">
@@ -1243,13 +1280,16 @@
           <div class="gallery-card" onclick="openLightbox(this)">
             <img src="images/Manaoag/images/pm_1768128432722_cmp.jpg" alt="Manaoag" />
           </div>
+          <button class="carousel-arrow right" onclick="carouselNav(this, 1)">&#8250;</button>
         </div>
+        <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">25</span></div>
         </div>
 
         <!-- Tarlac gallery sub-group -->
         <div class="gallery-subgroup hidden" data-gallerysub="gal-tarlac">
         <div class="gallery-grid">
-          <div class="gallery-card" onclick="openLightbox(this)">
+          <button class="carousel-arrow left" onclick="carouselNav(this, -1)">&#8249;</button>
+          <div class="gallery-card active-slide" onclick="openLightbox(this)">
             <img src="images/Tarlac/IMG_20250811_171107_439.jpg" alt="Tarlac" />
           </div>
           <div class="gallery-card" onclick="openLightbox(this)">
@@ -1285,13 +1325,16 @@
           <div class="gallery-card" onclick="openLightbox(this)">
             <img src="images/Tarlac/pm_1768128438942_cmp.jpg" alt="Tarlac" />
           </div>
+          <button class="carousel-arrow right" onclick="carouselNav(this, 1)">&#8250;</button>
         </div>
+        <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">12</span></div>
         </div>
 
         <!-- Video Call gallery sub-group -->
         <div class="gallery-subgroup hidden" data-gallerysub="gal-videocall">
         <div class="gallery-grid">
-          <div class="gallery-card" onclick="openLightbox(this)">
+          <button class="carousel-arrow left" onclick="carouselNav(this, -1)">&#8249;</button>
+          <div class="gallery-card active-slide" onclick="openLightbox(this)">
             <img src="images/Video Call/Screenshot_20250627-185513.jpg" alt="Video Call" />
           </div>
           <div class="gallery-card" onclick="openLightbox(this)">
@@ -1318,13 +1361,16 @@
           <div class="gallery-card" onclick="openLightbox(this)">
             <img src="images/Video Call/Screenshot_20251024-212208.jpg" alt="Video Call" />
           </div>
+          <button class="carousel-arrow right" onclick="carouselNav(this, 1)">&#8250;</button>
         </div>
+        <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">9</span></div>
         </div>
 
         <!-- Edits gallery sub-group -->
         <div class="gallery-subgroup hidden" data-gallerysub="gal-edits">
         <div class="gallery-grid">
-          <div class="gallery-card" onclick="openLightbox(this)">
+          <button class="carousel-arrow left" onclick="carouselNav(this, -1)">&#8249;</button>
+          <div class="gallery-card active-slide" onclick="openLightbox(this)">
             <img src="images/Edits/1.png" alt="Edit" />
           </div>
           <div class="gallery-card" onclick="openLightbox(this)">
@@ -1339,7 +1385,9 @@
           <div class="gallery-card" onclick="openLightbox(this)">
             <img src="images/Edits/us.png" alt="Edit" />
           </div>
+          <button class="carousel-arrow right" onclick="carouselNav(this, 1)">&#8250;</button>
         </div>
+        <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">5</span></div>
         </div>
 
       </div>
@@ -1561,6 +1609,25 @@
           observer.observe(folder);
         });
       })();
+
+      // Carousel navigation
+      function carouselNav(btn, direction) {
+        var grid = btn.closest(".gallery-grid");
+        var cards = Array.from(grid.querySelectorAll(".gallery-card"));
+        var currentIndex = cards.findIndex(function (c) {
+          return c.classList.contains("active-slide");
+        });
+        var newIndex = currentIndex + direction;
+        if (newIndex < 0) newIndex = cards.length - 1;
+        if (newIndex >= cards.length) newIndex = 0;
+        cards[currentIndex].classList.remove("active-slide");
+        cards[newIndex].classList.add("active-slide");
+        // Update counter
+        var counter = grid.parentElement.querySelector(".carousel-counter");
+        if (counter) {
+          counter.querySelector(".current-slide").textContent = newIndex + 1;
+        }
+      }
 
       // Lightbox for gallery
       function openLightbox(card) {
