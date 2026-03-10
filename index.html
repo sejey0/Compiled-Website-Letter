@@ -40,6 +40,11 @@
       body {
         font-family: "Quicksand", sans-serif;
         background-color: #fff8f0;
+        background-image: url("images/Bataan/2025/IMG_20251015_170052_999 (1) (1).jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
       }
 
       /* Floating hearts background */
@@ -1877,22 +1882,22 @@
         }
       });
 
-      // Play music
+      // Play music (called by ❚❚ button)
       function musicPlay() {
         var bgAudio = document.getElementById("bgAudio");
         if (bgAudio.src) {
           bgAudio.play().catch(function () {});
-          document.getElementById("btnPlay").classList.add("active-play");
-          document.getElementById("btnPause").classList.remove("active-play");
+          document.getElementById("btnPause").classList.add("active-play");
+          document.getElementById("btnPlay").classList.remove("active-play");
         }
       }
 
-      // Pause music
+      // Pause music (called by ▶ button)
       function musicPause() {
         var bgAudio = document.getElementById("bgAudio");
         bgAudio.pause();
-        document.getElementById("btnPause").classList.add("active-play");
-        document.getElementById("btnPlay").classList.remove("active-play");
+        document.getElementById("btnPlay").classList.add("active-play");
+        document.getElementById("btnPause").classList.remove("active-play");
       }
 
       // Volume up/down
@@ -1921,8 +1926,8 @@
         // Get display name from selected option
         var sel = document.getElementById("changeSongSelect");
         document.getElementById("nowPlaying").textContent = sel.options[sel.selectedIndex].textContent;
-        document.getElementById("btnPlay").classList.add("active-play");
-        document.getElementById("btnPause").classList.remove("active-play");
+        document.getElementById("btnPause").classList.add("active-play");
+        document.getElementById("btnPlay").classList.remove("active-play");
         // Reset select to placeholder
         sel.selectedIndex = 0;
       }
