@@ -1580,8 +1580,8 @@
 
       // Switch between gallery sub-categories
       function switchGallerySub(sub) {
-        // Update gallery sub-tab active states
-        document.querySelectorAll("#group-gallery .sub-tab").forEach(function (tab) {
+        // Update gallery sub-tab active states (only top-level gallery tabs, not year tabs)
+        document.querySelectorAll("#group-gallery > .flex > .sub-tab[data-gallerysub]").forEach(function (tab) {
           if (tab.dataset.gallerysub === sub) {
             tab.classList.add("active");
           } else {
