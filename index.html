@@ -980,96 +980,365 @@
 
         <!-- Gallery sub-tab bar -->
         <div class="flex justify-center flex-wrap gap-2 mb-6">
-          <button class="sub-tab active font-body" data-gallerysub="gal-monthsary" onclick="switchGallerySub('gal-monthsary')">1st Image Together</button>
-          <button class="sub-tab font-body" data-gallerysub="gal-girlfriends" onclick="switchGallerySub('gal-girlfriends')">Girlfriends Day</button>
-          <button class="sub-tab font-body" data-gallerysub="gal-anniversary" onclick="switchGallerySub('gal-anniversary')">Anniversary</button>
-          <button class="sub-tab font-body" data-gallerysub="gal-other" onclick="switchGallerySub('gal-other')">Other Letters</button>
+          <button class="sub-tab active font-body" data-gallerysub="gal-1st" onclick="switchGallerySub('gal-1st')">1st Image Together</button>
+          <button class="sub-tab font-body" data-gallerysub="gal-bataan" onclick="switchGallerySub('gal-bataan')">Bataan</button>
+          <button class="sub-tab font-body" data-gallerysub="gal-manaoag" onclick="switchGallerySub('gal-manaoag')">Manaoag</button>
+          <button class="sub-tab font-body" data-gallerysub="gal-tarlac" onclick="switchGallerySub('gal-tarlac')">Tarlac</button>
+          <button class="sub-tab font-body" data-gallerysub="gal-videocall" onclick="switchGallerySub('gal-videocall')">Video Call</button>
+          <button class="sub-tab font-body" data-gallerysub="gal-edits" onclick="switchGallerySub('gal-edits')">Edits</button>
         </div>
 
-        <!-- Monthsary gallery sub-group -->
-        <div class="gallery-subgroup" data-gallerysub="gal-monthsary">
-        <div class="space-y-6">
-
-          <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-blush">
-            <div class="flex justify-center">
-              <img
-                src="images/1st Image Together/1000019984.jpg"
-                alt="1st Image Together"
-                class="rounded-xl max-w-full max-h-[60vh] object-contain shadow-md cursor-pointer"
-                onclick="openLightbox(this.parentElement)"
-              />
-            </div>
+        <!-- 1st Image Together gallery sub-group -->
+        <div class="gallery-subgroup" data-gallerysub="gal-1st">
+        <div class="gallery-grid">
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/1st Image Together/1000019984.jpg" alt="1st Image Together" />
           </div>
-
         </div>
         </div>
 
-        <!-- Girlfriends Day gallery sub-group -->
-        <div class="gallery-subgroup hidden" data-gallerysub="gal-girlfriends">
-        <div class="space-y-6">
-
-          <!-- 1st Image Together -->
-          <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-blush">
-            <div class="flex items-center gap-3 mb-4">
-              <div class="folder-number">1</div>
-              <h3 class="font-body font-bold text-wine text-base sm:text-lg">1st Image Together</h3>
-            </div>
-            <div class="flex justify-center">
-              <img
-                src="https://placehold.co/400x500/fde8e8/b76e79?text=Photo+1"
-                alt="Photo 1"
-                class="rounded-xl max-w-full max-h-[60vh] object-contain shadow-md cursor-pointer"
-                onclick="openLightbox(this.parentElement)"
-              />
-            </div>
+        <!-- Bataan gallery sub-group -->
+        <div class="gallery-subgroup hidden" data-gallerysub="gal-bataan">
+        <div class="gallery-grid">
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251014_150357_935 (1).jpg" alt="Bataan" />
           </div>
-
-        </div>
-        </div>
-
-        <!-- Anniversary gallery sub-group -->
-        <div class="gallery-subgroup hidden" data-gallerysub="gal-anniversary">
-        <div class="space-y-6">
-
-          <!-- 1st Image Together -->
-          <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-blush">
-            <div class="flex items-center gap-3 mb-4">
-              <div class="folder-number">1</div>
-              <h3 class="font-body font-bold text-wine text-base sm:text-lg">1st Image Together</h3>
-            </div>
-            <div class="flex justify-center">
-              <img
-                src="https://placehold.co/400x500/f5e0e0/b76e79?text=Photo+1"
-                alt="Photo 1"
-                class="rounded-xl max-w-full max-h-[60vh] object-contain shadow-md cursor-pointer"
-                onclick="openLightbox(this.parentElement)"
-              />
-            </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251014_150413_750 (1).jpg" alt="Bataan" />
           </div>
-
-        </div>
-        </div>
-
-        <!-- Other Letters gallery sub-group -->
-        <div class="gallery-subgroup hidden" data-gallerysub="gal-other">
-        <div class="space-y-6">
-
-          <!-- 1st Image Together -->
-          <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-blush">
-            <div class="flex items-center gap-3 mb-4">
-              <div class="folder-number">1</div>
-              <h3 class="font-body font-bold text-wine text-base sm:text-lg">1st Image Together</h3>
-            </div>
-            <div class="flex justify-center">
-              <img
-                src="https://placehold.co/400x500/f0dde4/b76e79?text=Photo+1"
-                alt="Photo 1"
-                class="rounded-xl max-w-full max-h-[60vh] object-contain shadow-md cursor-pointer"
-                onclick="openLightbox(this.parentElement)"
-              />
-            </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251014_150416_176.jpg" alt="Bataan" />
           </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251014_173016_525.jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251014_173018_667.jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251014_173238_590.jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251014_173241_118.jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251014_173253_731 (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251014_173258_666.jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251014_173307_147.jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_105151_904 (1) (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_105156_781 (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_110430_401 (1) (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_110432_268 (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_163731_652 (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_164223_167 (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_164225_078 (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_164226_606 (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_164306_427 (1) (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_164308_360 (1) (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_164458_863 (1) (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_164500_235 (1) (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_164536_766 (1) (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_164542_689 (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_164836_465 (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_164902_316 (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_165008_077 (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_165347_795.jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_165558_948 (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_165640_604 (1) (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_165647_894 (1) (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_165654_237 (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_165713_247 (1) (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_165838_556.jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_165847_381 (1) (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_165908_471 (1) (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_170043_667 (1) (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251015_170052_999 (1) (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251016_113344_407 (1) (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251016_113348_177 (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251016_172338_173.jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251016_172452_850 (1) (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251016_172747_767 (1) (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251016_172844_150 (1) (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251016_174927_514 (1) (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/IMG_20251016_174931_298 (1).jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/pm_1768128388305_cmp.jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/pm_1768128393881_cmp.jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/pm_1768128394342_cmp.jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/pm_1768128397417_cmp.jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/pm_1768128397803_cmp.jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/pm_1768128399534_cmp.jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/pm_1768128399819_cmp.jpg" alt="Bataan" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Bataan/pm_1768128401211_cmp.jpg" alt="Bataan" />
+          </div>
+        </div>
+        </div>
 
+        <!-- Manaoag gallery sub-group -->
+        <div class="gallery-subgroup hidden" data-gallerysub="gal-manaoag">
+        <div class="gallery-grid">
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/pm_1768128416038_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/pm_1768128416437_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/pm_1768128417162_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/pm_1768128419042_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/pm_1768128419866_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/pm_1768128420308_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/pm_1768128420724_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/pm_1768128422150_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/pm_1768128423235_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/pm_1768128424188_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/pm_1768128424661_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/pm_1768128425683_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/pm_1768128427916_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/pm_1768128428355_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/pm_1768128428874_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/pm_1768128429261_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/pm_1768128429605_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/images/pm_1768128416813_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/images/pm_1768128422612_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/images/pm_1768128423771_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/images/pm_1768128430120_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/images/pm_1768128430484_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/images/pm_1768128430947_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/images/pm_1768128432221_cmp.jpg" alt="Manaoag" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Manaoag/images/pm_1768128432722_cmp.jpg" alt="Manaoag" />
+          </div>
+        </div>
+        </div>
+
+        <!-- Tarlac gallery sub-group -->
+        <div class="gallery-subgroup hidden" data-gallerysub="gal-tarlac">
+        <div class="gallery-grid">
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Tarlac/IMG_20250811_171107_439.jpg" alt="Tarlac" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Tarlac/IMG_20250811_171110_307.jpg" alt="Tarlac" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Tarlac/IMG_20250811_171117_133.jpg" alt="Tarlac" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Tarlac/IMG_20251109_200530_356.jpg" alt="Tarlac" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Tarlac/IMG_20251109_200541_882.jpg" alt="Tarlac" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Tarlac/pm_1768128433036_cmp.jpg" alt="Tarlac" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Tarlac/pm_1768128433518_cmp.jpg" alt="Tarlac" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Tarlac/pm_1768128437994_cmp.jpg" alt="Tarlac" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Tarlac/pm_1768128438253_cmp.jpg" alt="Tarlac" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Tarlac/pm_1768128438579_cmp.jpg" alt="Tarlac" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Tarlac/pm_1768128438758_cmp.jpg" alt="Tarlac" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Tarlac/pm_1768128438942_cmp.jpg" alt="Tarlac" />
+          </div>
+        </div>
+        </div>
+
+        <!-- Video Call gallery sub-group -->
+        <div class="gallery-subgroup hidden" data-gallerysub="gal-videocall">
+        <div class="gallery-grid">
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Video Call/Screenshot_20250627-185513.jpg" alt="Video Call" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Video Call/Screenshot_20250801-214334.jpg" alt="Video Call" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Video Call/Screenshot_20250801-214351.jpg" alt="Video Call" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Video Call/Screenshot_20250807-185007.jpg" alt="Video Call" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Video Call/Screenshot_20250926-210527.jpg" alt="Video Call" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Video Call/Screenshot_20250926-210535.jpg" alt="Video Call" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Video Call/Screenshot_20250927-214810.jpg" alt="Video Call" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Video Call/Screenshot_20251008-213029.jpg" alt="Video Call" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Video Call/Screenshot_20251024-212208.jpg" alt="Video Call" />
+          </div>
+        </div>
+        </div>
+
+        <!-- Edits gallery sub-group -->
+        <div class="gallery-subgroup hidden" data-gallerysub="gal-edits">
+        <div class="gallery-grid">
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Edits/1.png" alt="Edit" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Edits/2.png" alt="Edit" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Edits/Aesthetic Moodboard Heart Shape Frame Photo Collage.png" alt="Edit" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Edits/White and Black Simple Film Collage Phone Wallpaper.png" alt="Edit" />
+          </div>
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="images/Edits/us.png" alt="Edit" />
+          </div>
         </div>
         </div>
 
@@ -1178,7 +1447,7 @@
 
         // Reset gallery sub-tabs to first when switching to gallery
         if (category === "gallery") {
-          switchGallerySub("gal-monthsary");
+          switchGallerySub("gal-1st");
           return;
         }
 
