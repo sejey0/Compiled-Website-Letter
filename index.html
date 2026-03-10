@@ -240,6 +240,12 @@
       .letter-subgroup.hidden {
         display: none;
       }
+      .gallery-subgroup {
+        animation: fadeInGroup 0.3s ease;
+      }
+      .gallery-subgroup.hidden {
+        display: none;
+      }
 
       /* Checklist styles */
       .checklist-checkbox {
@@ -971,74 +977,102 @@
 
       <!-- Gallery Group (hidden by default) -->
       <div class="folder-group hidden" id="group-gallery">
-        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-blush">
-          <h3 class="font-script text-2xl text-rosegold mb-1">Our Moments Together</h3>
-          <p class="text-wine/50 text-sm mb-6">A collection of our favorite memories. Click any photo to view it full size.</p>
 
-          <div class="gallery-grid">
-
-            <div class="gallery-card" onclick="openLightbox(this)">
-              <img src="https://placehold.co/400x500/f9e4e4/b76e79?text=Photo+1" alt="Photo 1" />
-              <div class="gallery-caption font-body">Our memory</div>
-            </div>
-
-            <div class="gallery-card" onclick="openLightbox(this)">
-              <img src="https://placehold.co/400x350/fde8e8/b76e79?text=Photo+2" alt="Photo 2" />
-              <div class="gallery-caption font-body">Our memory</div>
-            </div>
-
-            <div class="gallery-card" onclick="openLightbox(this)">
-              <img src="https://placehold.co/400x450/f5e0e0/b76e79?text=Photo+3" alt="Photo 3" />
-              <div class="gallery-caption font-body">Our memory</div>
-            </div>
-
-            <div class="gallery-card" onclick="openLightbox(this)">
-              <img src="https://placehold.co/400x400/f0dde4/b76e79?text=Photo+4" alt="Photo 4" />
-              <div class="gallery-caption font-body">Our memory</div>
-            </div>
-
-            <div class="gallery-card" onclick="openLightbox(this)">
-              <img src="https://placehold.co/400x520/f9e4e4/b76e79?text=Photo+5" alt="Photo 5" />
-              <div class="gallery-caption font-body">Our memory</div>
-            </div>
-
-            <div class="gallery-card" onclick="openLightbox(this)">
-              <img src="https://placehold.co/400x380/fde8e8/b76e79?text=Photo+6" alt="Photo 6" />
-              <div class="gallery-caption font-body">Our memory</div>
-            </div>
-
-            <div class="gallery-card" onclick="openLightbox(this)">
-              <img src="https://placehold.co/400x460/f5e0e0/b76e79?text=Photo+7" alt="Photo 7" />
-              <div class="gallery-caption font-body">Our memory</div>
-            </div>
-
-            <div class="gallery-card" onclick="openLightbox(this)">
-              <img src="https://placehold.co/400x350/f0dde4/b76e79?text=Photo+8" alt="Photo 8" />
-              <div class="gallery-caption font-body">Our memory</div>
-            </div>
-
-            <div class="gallery-card" onclick="openLightbox(this)">
-              <img src="https://placehold.co/400x500/f9e4e4/b76e79?text=Photo+9" alt="Photo 9" />
-              <div class="gallery-caption font-body">Our memory</div>
-            </div>
-
-            <div class="gallery-card" onclick="openLightbox(this)">
-              <img src="https://placehold.co/400x420/fde8e8/b76e79?text=Photo+10" alt="Photo 10" />
-              <div class="gallery-caption font-body">Our memory</div>
-            </div>
-
-            <div class="gallery-card" onclick="openLightbox(this)">
-              <img src="https://placehold.co/400x380/f5e0e0/b76e79?text=Photo+11" alt="Photo 11" />
-              <div class="gallery-caption font-body">Our memory</div>
-            </div>
-
-            <div class="gallery-card" onclick="openLightbox(this)">
-              <img src="https://placehold.co/400x450/f0dde4/b76e79?text=Photo+12" alt="Photo 12" />
-              <div class="gallery-caption font-body">Our memory</div>
-            </div>
-
-          </div>
+        <!-- Gallery sub-tab bar -->
+        <div class="flex justify-center flex-wrap gap-2 mb-6">
+          <button class="sub-tab active font-body" data-gallerysub="gal-monthsary" onclick="switchGallerySub('gal-monthsary')">1st Image Together</button>
+          <button class="sub-tab font-body" data-gallerysub="gal-girlfriends" onclick="switchGallerySub('gal-girlfriends')">Girlfriends Day</button>
+          <button class="sub-tab font-body" data-gallerysub="gal-anniversary" onclick="switchGallerySub('gal-anniversary')">Anniversary</button>
+          <button class="sub-tab font-body" data-gallerysub="gal-other" onclick="switchGallerySub('gal-other')">Other Letters</button>
         </div>
+
+        <!-- Monthsary gallery sub-group -->
+        <div class="gallery-subgroup" data-gallerysub="gal-monthsary">
+        <div class="space-y-6">
+
+          <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-blush">
+            <div class="flex justify-center">
+              <img
+                src="images/1st Image Together/1000019984.jpg"
+                alt="1st Image Together"
+                class="rounded-xl max-w-full max-h-[60vh] object-contain shadow-md cursor-pointer"
+                onclick="openLightbox(this.parentElement)"
+              />
+            </div>
+          </div>
+
+        </div>
+        </div>
+
+        <!-- Girlfriends Day gallery sub-group -->
+        <div class="gallery-subgroup hidden" data-gallerysub="gal-girlfriends">
+        <div class="space-y-6">
+
+          <!-- 1st Image Together -->
+          <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-blush">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="folder-number">1</div>
+              <h3 class="font-body font-bold text-wine text-base sm:text-lg">1st Image Together</h3>
+            </div>
+            <div class="flex justify-center">
+              <img
+                src="https://placehold.co/400x500/fde8e8/b76e79?text=Photo+1"
+                alt="Photo 1"
+                class="rounded-xl max-w-full max-h-[60vh] object-contain shadow-md cursor-pointer"
+                onclick="openLightbox(this.parentElement)"
+              />
+            </div>
+          </div>
+
+        </div>
+        </div>
+
+        <!-- Anniversary gallery sub-group -->
+        <div class="gallery-subgroup hidden" data-gallerysub="gal-anniversary">
+        <div class="space-y-6">
+
+          <!-- 1st Image Together -->
+          <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-blush">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="folder-number">1</div>
+              <h3 class="font-body font-bold text-wine text-base sm:text-lg">1st Image Together</h3>
+            </div>
+            <div class="flex justify-center">
+              <img
+                src="https://placehold.co/400x500/f5e0e0/b76e79?text=Photo+1"
+                alt="Photo 1"
+                class="rounded-xl max-w-full max-h-[60vh] object-contain shadow-md cursor-pointer"
+                onclick="openLightbox(this.parentElement)"
+              />
+            </div>
+          </div>
+
+        </div>
+        </div>
+
+        <!-- Other Letters gallery sub-group -->
+        <div class="gallery-subgroup hidden" data-gallerysub="gal-other">
+        <div class="space-y-6">
+
+          <!-- 1st Image Together -->
+          <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-blush">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="folder-number">1</div>
+              <h3 class="font-body font-bold text-wine text-base sm:text-lg">1st Image Together</h3>
+            </div>
+            <div class="flex justify-center">
+              <img
+                src="https://placehold.co/400x500/f0dde4/b76e79?text=Photo+1"
+                alt="Photo 1"
+                class="rounded-xl max-w-full max-h-[60vh] object-contain shadow-md cursor-pointer"
+                onclick="openLightbox(this.parentElement)"
+              />
+            </div>
+          </div>
+
+        </div>
+        </div>
+
       </div>
 
       <!-- Lightbox Modal -->
@@ -1091,7 +1125,7 @@
         var isOpen = drawer.classList.contains("open");
 
         // Close all other drawers in the same group
-        var group = folder.closest(".letter-subgroup") || folder.closest(".folder-group");
+        var group = folder.closest(".letter-subgroup") || folder.closest(".gallery-subgroup") || folder.closest(".folder-group");
         group.querySelectorAll(".drawer-content.open").forEach(function (d) {
           if (d !== drawer) {
             d.classList.remove("open");
@@ -1142,6 +1176,12 @@
           return;
         }
 
+        // Reset gallery sub-tabs to first when switching to gallery
+        if (category === "gallery") {
+          switchGallerySub("gal-monthsary");
+          return;
+        }
+
         // Re-trigger folder entrance animations
         activeGroup.querySelectorAll(".folder").forEach(function (folder) {
           folder.classList.remove("visible");
@@ -1153,8 +1193,8 @@
 
       // Switch between letter sub-categories
       function switchSubCategory(sub) {
-        // Update sub-tab active states
-        document.querySelectorAll(".sub-tab").forEach(function (tab) {
+        // Update sub-tab active states (only inside letters group)
+        document.querySelectorAll("#group-letters .sub-tab").forEach(function (tab) {
           if (tab.dataset.sub === sub) {
             tab.classList.add("active");
           } else {
@@ -1174,6 +1214,40 @@
         });
 
         var activeSub = document.querySelector('.letter-subgroup[data-sub="' + sub + '"]');
+        activeSub.classList.remove("hidden");
+
+        // Re-trigger folder entrance animations
+        activeSub.querySelectorAll(".folder").forEach(function (folder) {
+          folder.classList.remove("visible");
+        });
+        setTimeout(function () {
+          animateFoldersInGroup(activeSub);
+        }, 50);
+      }
+
+      // Switch between gallery sub-categories
+      function switchGallerySub(sub) {
+        // Update gallery sub-tab active states
+        document.querySelectorAll("#group-gallery .sub-tab").forEach(function (tab) {
+          if (tab.dataset.gallerysub === sub) {
+            tab.classList.add("active");
+          } else {
+            tab.classList.remove("active");
+          }
+        });
+
+        // Close all open drawers in gallery
+        document.querySelectorAll("#group-gallery .drawer-content.open").forEach(function (d) {
+          d.classList.remove("open");
+          d.parentElement.querySelector(".chevron").classList.remove("rotated");
+        });
+
+        // Show/hide gallery sub-groups
+        document.querySelectorAll(".gallery-subgroup").forEach(function (sg) {
+          sg.classList.add("hidden");
+        });
+
+        var activeSub = document.querySelector('.gallery-subgroup[data-gallerysub="' + sub + '"]');
         activeSub.classList.remove("hidden");
 
         // Re-trigger folder entrance animations
