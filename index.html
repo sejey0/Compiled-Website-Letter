@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Us &mdash; Our Story</title>
-    <link rel="icon" type="image/jpeg" href="images/1st Image Together/1000019984.jpg" />
+    <link
+      rel="icon"
+      type="image/jpeg"
+      href="images/1st Image Together/1000019984.jpg"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -178,16 +182,36 @@
       }
 
       /* Staggered folder colors */
-      .folder-color-1 .folder-tab { background: linear-gradient(135deg, #f9e4e4, #f0d0d0); }
-      .folder-color-1 .folder-tab::before { background: linear-gradient(135deg, #f9e4e4, #f0d0d0); }
-      .folder-color-2 .folder-tab { background: linear-gradient(135deg, #e8d5e0, #dfc8d8); }
-      .folder-color-2 .folder-tab::before { background: linear-gradient(135deg, #e8d5e0, #dfc8d8); }
-      .folder-color-3 .folder-tab { background: linear-gradient(135deg, #fde8e8, #f5d5d5); }
-      .folder-color-3 .folder-tab::before { background: linear-gradient(135deg, #fde8e8, #f5d5d5); }
-      .folder-color-4 .folder-tab { background: linear-gradient(135deg, #f0dde4, #e8cdd8); }
-      .folder-color-4 .folder-tab::before { background: linear-gradient(135deg, #f0dde4, #e8cdd8); }
-      .folder-color-5 .folder-tab { background: linear-gradient(135deg, #f5e0e0, #ebd0d0); }
-      .folder-color-5 .folder-tab::before { background: linear-gradient(135deg, #f5e0e0, #ebd0d0); }
+      .folder-color-1 .folder-tab {
+        background: linear-gradient(135deg, #f9e4e4, #f0d0d0);
+      }
+      .folder-color-1 .folder-tab::before {
+        background: linear-gradient(135deg, #f9e4e4, #f0d0d0);
+      }
+      .folder-color-2 .folder-tab {
+        background: linear-gradient(135deg, #e8d5e0, #dfc8d8);
+      }
+      .folder-color-2 .folder-tab::before {
+        background: linear-gradient(135deg, #e8d5e0, #dfc8d8);
+      }
+      .folder-color-3 .folder-tab {
+        background: linear-gradient(135deg, #fde8e8, #f5d5d5);
+      }
+      .folder-color-3 .folder-tab::before {
+        background: linear-gradient(135deg, #fde8e8, #f5d5d5);
+      }
+      .folder-color-4 .folder-tab {
+        background: linear-gradient(135deg, #f0dde4, #e8cdd8);
+      }
+      .folder-color-4 .folder-tab::before {
+        background: linear-gradient(135deg, #f0dde4, #e8cdd8);
+      }
+      .folder-color-5 .folder-tab {
+        background: linear-gradient(135deg, #f5e0e0, #ebd0d0);
+      }
+      .folder-color-5 .folder-tab::before {
+        background: linear-gradient(135deg, #f5e0e0, #ebd0d0);
+      }
 
       /* Category tabs */
       .category-tab {
@@ -214,8 +238,14 @@
         display: none;
       }
       @keyframes fadeInGroup {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       /* Sub-tabs inside Letters */
@@ -357,11 +387,19 @@
         transform: translateY(-50%) scale(1.1);
         box-shadow: 0 4px 15px rgba(183, 110, 121, 0.5);
       }
-      .carousel-arrow.left { left: -8px; }
-      .carousel-arrow.right { right: -8px; }
+      .carousel-arrow.left {
+        left: -8px;
+      }
+      .carousel-arrow.right {
+        right: -8px;
+      }
       @media (min-width: 640px) {
-        .carousel-arrow.left { left: -16px; }
-        .carousel-arrow.right { right: -16px; }
+        .carousel-arrow.left {
+          left: -16px;
+        }
+        .carousel-arrow.right {
+          right: -16px;
+        }
       }
       .carousel-counter {
         text-align: center;
@@ -376,7 +414,11 @@
         left: 0;
         right: 0;
         padding: 8px 12px;
-        background: linear-gradient(to top, rgba(114, 47, 55, 0.7), transparent);
+        background: linear-gradient(
+          to top,
+          rgba(114, 47, 55, 0.7),
+          transparent
+        );
         color: white;
         font-size: 0.75rem;
         font-weight: 500;
@@ -449,7 +491,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: opacity 0.6s ease, visibility 0.6s ease;
+        transition:
+          opacity 0.6s ease,
+          visibility 0.6s ease;
       }
       .gate-overlay.hidden {
         opacity: 0;
@@ -468,8 +512,14 @@
         animation: gateSlideUp 0.6s ease;
       }
       @keyframes gateSlideUp {
-        from { opacity: 0; transform: translateY(30px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
       .gate-card h2 {
         font-family: "Great Vibes", cursive;
@@ -740,7 +790,6 @@
     </style>
   </head>
   <body class="min-h-screen relative">
-
     <!-- Security Gate Overlay -->
     <div class="gate-overlay" id="gateOverlay">
       <div class="gate-card">
@@ -749,24 +798,54 @@
         <p>Answer the question to unlock our memories</p>
 
         <div class="gate-field">
-          <label class="gate-label" for="gateAnswer">The day you said yes?</label>
+          <label class="gate-label" for="gateAnswer"
+            >The day you said yes?</label
+          >
           <input type="date" class="gate-input" id="gateAnswer" />
         </div>
 
         <div class="gate-field">
-          <label class="gate-label" for="gateAudio">Choose background music</label>
+          <label class="gate-label" for="gateAudio"
+            >Choose background music</label
+          >
           <select class="gate-select" id="gateAudio">
             <option value="" disabled selected>Select a song...</option>
-            <option value="audios/Adie - Tahanan (Lyrics).mp3">Adie - Tahanan</option>
-            <option value="audios/Amiel Sol - Sa Bawat Sandali (Lyrics).mp3">Amiel Sol - Sa Bawat Sandali</option>
+            <option value="audios/Adie - Tahanan (Lyrics).mp3">
+              Adie - Tahanan
+            </option>
+            <option value="audios/Amiel Sol - Sa Bawat Sandali (Lyrics).mp3">
+              Amiel Sol - Sa Bawat Sandali
+            </option>
             <option value="audios/Be With You.mp3">Be With You</option>
-            <option value="audios/December Avenue - Saksi Ang Langit (Lyrics).mp3">December Avenue - Saksi Ang Langit</option>
-            <option value="audios/Hindi Ako Mawawala (c) El Manu (Official Lyric Video).mp3">El Manu - Hindi Ako Mawawala</option>
-            <option value="audios/Kahel Na Langit - Maki (Lyrics).mp3">Maki - Kahel Na Langit</option>
-            <option value="audios/Nahanap Kita - Amiel Sol (Official Lyric Video).mp3">Amiel Sol - Nahanap Kita</option>
-            <option value="audios/Rob Deniel - Sinta lyrics.mp3">Rob Deniel - Sinta</option>
-            <option value="audios/Simoy - Rob Deniel  100 Awit Para Kay Stella (Official Lyric Video).mp3">Rob Deniel - Simoy</option>
-            <option value="audios/Tahanan (c) El Manu [Official Audio].mp3">El Manu - Tahanan</option>
+            <option
+              value="audios/December Avenue - Saksi Ang Langit (Lyrics).mp3"
+            >
+              December Avenue - Saksi Ang Langit
+            </option>
+            <option
+              value="audios/Hindi Ako Mawawala (c) El Manu (Official Lyric Video).mp3"
+            >
+              El Manu - Hindi Ako Mawawala
+            </option>
+            <option value="audios/Kahel Na Langit - Maki (Lyrics).mp3">
+              Maki - Kahel Na Langit
+            </option>
+            <option
+              value="audios/Nahanap Kita - Amiel Sol (Official Lyric Video).mp3"
+            >
+              Amiel Sol - Nahanap Kita
+            </option>
+            <option value="audios/Rob Deniel - Sinta lyrics.mp3">
+              Rob Deniel - Sinta
+            </option>
+            <option
+              value="audios/Simoy - Rob Deniel  100 Awit Para Kay Stella (Official Lyric Video).mp3"
+            >
+              Rob Deniel - Simoy
+            </option>
+            <option value="audios/Tahanan (c) El Manu [Official Audio].mp3">
+              El Manu - Tahanan
+            </option>
             <option value="none">No music</option>
           </select>
         </div>
@@ -787,38 +866,106 @@
 
         <!-- Play / Pause buttons -->
         <div class="music-btn-row">
-          <button class="music-btn" onclick="musicVolumeChange(-0.1)" title="Volume Down">&#128265;</button>
-          <button class="music-btn" onclick="musicPause()" id="btnPlay" title="Play">&#9654;</button>
-          <button class="music-btn active-play" onclick="musicPlay()" id="btnPause" title="Pause">&#10074;&#10074;</button>
-          <button class="music-btn" onclick="musicVolumeChange(0.1)" title="Volume Up">&#128266;</button>
+          <button
+            class="music-btn"
+            onclick="musicVolumeChange(-0.1)"
+            title="Volume Down"
+          >
+            &#128265;
+          </button>
+          <button
+            class="music-btn"
+            onclick="musicPause()"
+            id="btnPlay"
+            title="Play"
+          >
+            &#9654;
+          </button>
+          <button
+            class="music-btn active-play"
+            onclick="musicPlay()"
+            id="btnPause"
+            title="Pause"
+          >
+            &#10074;&#10074;
+          </button>
+          <button
+            class="music-btn"
+            onclick="musicVolumeChange(0.1)"
+            title="Volume Up"
+          >
+            &#128266;
+          </button>
         </div>
 
         <!-- Volume bar -->
         <div class="music-volume-row">
-          <span style="font-size:0.7rem;color:#b76e79;font-weight:600;">Vol</span>
+          <span style="font-size: 0.7rem; color: #b76e79; font-weight: 600"
+            >Vol</span
+          >
           <div class="music-volume-bar">
             <div class="music-volume-fill" id="volumeFill"></div>
           </div>
-          <span style="font-size:0.7rem;color:#b76e79;font-weight:600;" id="volumeLabel">30%</span>
+          <span
+            style="font-size: 0.7rem; color: #b76e79; font-weight: 600"
+            id="volumeLabel"
+            >30%</span
+          >
         </div>
 
         <!-- Change song -->
-        <select class="music-change-select" id="changeSongSelect" onchange="changeSong(this.value)">
+        <select
+          class="music-change-select"
+          id="changeSongSelect"
+          onchange="changeSong(this.value)"
+        >
           <option value="" disabled selected>Change song...</option>
-          <option value="audios/Adie - Tahanan (Lyrics).mp3">Adie - Tahanan</option>
-          <option value="audios/Amiel Sol - Sa Bawat Sandali (Lyrics).mp3">Amiel Sol - Sa Bawat Sandali</option>
+          <option value="audios/Adie - Tahanan (Lyrics).mp3">
+            Adie - Tahanan
+          </option>
+          <option value="audios/Amiel Sol - Sa Bawat Sandali (Lyrics).mp3">
+            Amiel Sol - Sa Bawat Sandali
+          </option>
           <option value="audios/Be With You.mp3">Be With You</option>
-          <option value="audios/December Avenue - Saksi Ang Langit (Lyrics).mp3">December Avenue - Saksi Ang Langit</option>
-          <option value="audios/Hindi Ako Mawawala (c) El Manu (Official Lyric Video).mp3">El Manu - Hindi Ako Mawawala</option>
-          <option value="audios/Kahel Na Langit - Maki (Lyrics).mp3">Maki - Kahel Na Langit</option>
-          <option value="audios/Nahanap Kita - Amiel Sol (Official Lyric Video).mp3">Amiel Sol - Nahanap Kita</option>
-          <option value="audios/Rob Deniel - Sinta lyrics.mp3">Rob Deniel - Sinta</option>
-          <option value="audios/Simoy - Rob Deniel  100 Awit Para Kay Stella (Official Lyric Video).mp3">Rob Deniel - Simoy</option>
-          <option value="audios/Tahanan (c) El Manu [Official Audio].mp3">El Manu - Tahanan</option>
+          <option
+            value="audios/December Avenue - Saksi Ang Langit (Lyrics).mp3"
+          >
+            December Avenue - Saksi Ang Langit
+          </option>
+          <option
+            value="audios/Hindi Ako Mawawala (c) El Manu (Official Lyric Video).mp3"
+          >
+            El Manu - Hindi Ako Mawawala
+          </option>
+          <option value="audios/Kahel Na Langit - Maki (Lyrics).mp3">
+            Maki - Kahel Na Langit
+          </option>
+          <option
+            value="audios/Nahanap Kita - Amiel Sol (Official Lyric Video).mp3"
+          >
+            Amiel Sol - Nahanap Kita
+          </option>
+          <option value="audios/Rob Deniel - Sinta lyrics.mp3">
+            Rob Deniel - Sinta
+          </option>
+          <option
+            value="audios/Simoy - Rob Deniel  100 Awit Para Kay Stella (Official Lyric Video).mp3"
+          >
+            Rob Deniel - Simoy
+          </option>
+          <option value="audios/Tahanan (c) El Manu [Official Audio].mp3">
+            El Manu - Tahanan
+          </option>
           <option value="none">No music</option>
         </select>
       </div>
-      <button class="music-toggle-btn" onclick="toggleMusicPanel()" title="Music Controls">&#9835;</button>
+      <button
+        class="music-toggle-btn"
+        onclick="toggleMusicPanel()"
+        title="Music Controls"
+      >
+        &#9835;
+      </button>
     </div>
 
     <!-- Floating Hearts Background -->
@@ -828,16 +975,17 @@
     <section
       class="hero-section fixed top-0 left-0 right-0 z-20 flex items-center justify-center py-4 px-4 text-center"
     >
-      <h1
-        class="font-script text-4xl sm:text-5xl text-rosegold drop-shadow-sm"
-      >
+      <h1 class="font-script text-4xl sm:text-5xl text-rosegold drop-shadow-sm">
         Us &mdash; Our Story
       </h1>
     </section>
 
     <!-- Category Tabs -->
     <section class="relative z-10 max-w-2xl mx-auto px-4 pt-28">
-      <div class="flex justify-center flex-wrap gap-3 sm:gap-4" id="categoryTabs">
+      <div
+        class="flex justify-center flex-wrap gap-3 sm:gap-4"
+        id="categoryTabs"
+      >
         <button
           class="category-tab active font-body font-semibold text-sm sm:text-base px-5 sm:px-8 py-3 rounded-full transition-all duration-300 shadow-md"
           data-category="letters"
@@ -864,464 +1012,672 @@
 
     <!-- Folders Section -->
     <section class="relative z-10 max-w-2xl mx-auto px-4 pb-32 pt-8">
-
       <!-- Letters Group (contains sub-tabs) -->
       <div class="folder-group" id="group-letters">
-
         <!-- Sub-tab bar -->
         <div class="flex justify-center flex-wrap gap-2 mb-6">
-          <button class="sub-tab active font-body" data-sub="monthsary" onclick="switchSubCategory('monthsary')">Monthsary</button>
-          <button class="sub-tab font-body" data-sub="girlfriends" onclick="switchSubCategory('girlfriends')">Girlfriends Day</button>
-          <button class="sub-tab font-body" data-sub="anniversary" onclick="switchSubCategory('anniversary')">Anniversary</button>
-          <button class="sub-tab font-body" data-sub="other" onclick="switchSubCategory('other')">Other Letters</button>
+          <button
+            class="sub-tab active font-body"
+            data-sub="monthsary"
+            onclick="switchSubCategory('monthsary')"
+          >
+            Monthsary
+          </button>
+          <button
+            class="sub-tab font-body"
+            data-sub="girlfriends"
+            onclick="switchSubCategory('girlfriends')"
+          >
+            Girlfriends Day
+          </button>
+          <button
+            class="sub-tab font-body"
+            data-sub="anniversary"
+            onclick="switchSubCategory('anniversary')"
+          >
+            Anniversary
+          </button>
+          <button
+            class="sub-tab font-body"
+            data-sub="other"
+            onclick="switchSubCategory('other')"
+          >
+            Other Letters
+          </button>
         </div>
 
         <!-- Monthsary sub-group -->
         <div class="letter-subgroup" data-sub="monthsary">
-        <div class="space-y-6">
-
-          <!-- 7th Monthsary -->
-          <div class="folder folder-color-2" data-delay="0">
-            <div
-              class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
-              onclick="toggleDrawer(this)"
-            >
-              <div class="flex items-center gap-4 min-w-0">
-                <div class="folder-number">7</div>
-                <div class="min-w-0">
-                  <h3 class="font-body font-bold text-wine text-base sm:text-lg truncate">
-                    7th Monthsary
-                  </h3>
-                  <p class="text-wine/50 text-xs sm:text-sm truncate">February 15, 2026</p>
+          <div class="space-y-6">
+            <!-- 7th Monthsary -->
+            <div class="folder folder-color-2" data-delay="0">
+              <div
+                class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
+                onclick="toggleDrawer(this)"
+              >
+                <div class="flex items-center gap-4 min-w-0">
+                  <div class="folder-number">7</div>
+                  <div class="min-w-0">
+                    <h3
+                      class="font-body font-bold text-wine text-base sm:text-lg truncate"
+                    >
+                      7th Monthsary
+                    </h3>
+                    <p class="text-wine/50 text-xs sm:text-sm truncate">
+                      February 15, 2026
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 flex-shrink-0">
+                  <span
+                    class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider"
+                  >
+                    7th Month
+                  </span>
+                  <svg
+                    class="chevron w-5 h-5 text-wine/40"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
                 </div>
               </div>
-              <div class="flex items-center gap-3 flex-shrink-0">
-                <span class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
-                  7th Month
-                </span>
-                <svg class="chevron w-5 h-5 text-wine/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
+              <div
+                class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner"
+              >
+                <div class="p-5">
+                  <a
+                    href="https://sejey0.github.io/7th_Monthsary/"
+                    class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Open Letter &rarr;
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner">
-              <div class="p-5">
-                <a
-                  href="https://sejey0.github.io/7th_Monthsary/"
-                  class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Open Letter &rarr;
-                </a>
+
+            <!-- 6th Monthsary -->
+            <div class="folder folder-color-1" data-delay="50">
+              <div
+                class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
+                onclick="toggleDrawer(this)"
+              >
+                <div class="flex items-center gap-4 min-w-0">
+                  <div class="folder-number">6</div>
+                  <div class="min-w-0">
+                    <h3
+                      class="font-body font-bold text-wine text-base sm:text-lg truncate"
+                    >
+                      6th Monthsary
+                    </h3>
+                    <p class="text-wine/50 text-xs sm:text-sm truncate">
+                      January 15, 2026
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 flex-shrink-0">
+                  <span
+                    class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider"
+                  >
+                    6th Month
+                  </span>
+                  <svg
+                    class="chevron w-5 h-5 text-wine/40"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner"
+              >
+                <div class="p-5">
+                  <a
+                    href="https://sejey0.github.io/6th_Monthsary/"
+                    class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Open Letter &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5th Monthsary -->
+            <div class="folder folder-color-5" data-delay="100">
+              <div
+                class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
+                onclick="toggleDrawer(this)"
+              >
+                <div class="flex items-center gap-4 min-w-0">
+                  <div class="folder-number">5</div>
+                  <div class="min-w-0">
+                    <h3
+                      class="font-body font-bold text-wine text-base sm:text-lg truncate"
+                    >
+                      5th Monthsary
+                    </h3>
+                    <p class="text-wine/50 text-xs sm:text-sm truncate">
+                      December 15, 2025
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 flex-shrink-0">
+                  <span
+                    class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider"
+                  >
+                    5th + Birthday
+                  </span>
+                  <svg
+                    class="chevron w-5 h-5 text-wine/40"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner"
+              >
+                <div class="p-5">
+                  <a
+                    href="https://sejey0.github.io/5th_Monthsary/"
+                    class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Open Letter &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4th Monthsary -->
+            <div class="folder folder-color-4" data-delay="150">
+              <div
+                class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
+                onclick="toggleDrawer(this)"
+              >
+                <div class="flex items-center gap-4 min-w-0">
+                  <div class="folder-number">4</div>
+                  <div class="min-w-0">
+                    <h3
+                      class="font-body font-bold text-wine text-base sm:text-lg truncate"
+                    >
+                      4th Monthsary
+                    </h3>
+                    <p class="text-wine/50 text-xs sm:text-sm truncate">
+                      November 15, 2025
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 flex-shrink-0">
+                  <span
+                    class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider"
+                  >
+                    4th Month
+                  </span>
+                  <svg
+                    class="chevron w-5 h-5 text-wine/40"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner"
+              >
+                <div class="p-5">
+                  <a
+                    href="https://sejey0.github.io/4th_Monthsary/"
+                    class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Open Letter &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3rd Monthsary -->
+            <div class="folder folder-color-3" data-delay="200">
+              <div
+                class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
+                onclick="toggleDrawer(this)"
+              >
+                <div class="flex items-center gap-4 min-w-0">
+                  <div class="folder-number">3</div>
+                  <div class="min-w-0">
+                    <h3
+                      class="font-body font-bold text-wine text-base sm:text-lg truncate"
+                    >
+                      3rd Monthsary
+                    </h3>
+                    <p class="text-wine/50 text-xs sm:text-sm truncate">
+                      October 15, 2025
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 flex-shrink-0">
+                  <span
+                    class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider"
+                  >
+                    3rd Month
+                  </span>
+                  <svg
+                    class="chevron w-5 h-5 text-wine/40"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner"
+              >
+                <div class="p-5">
+                  <a
+                    href="https://sejey0.github.io/3rd_Monthsary/"
+                    class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Open Letter &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2nd Monthsary -->
+            <div class="folder folder-color-2" data-delay="250">
+              <div
+                class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
+                onclick="toggleDrawer(this)"
+              >
+                <div class="flex items-center gap-4 min-w-0">
+                  <div class="folder-number">2</div>
+                  <div class="min-w-0">
+                    <h3
+                      class="font-body font-bold text-wine text-base sm:text-lg truncate"
+                    >
+                      2nd Monthsary
+                    </h3>
+                    <p class="text-wine/50 text-xs sm:text-sm truncate">
+                      September 15, 2025
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 flex-shrink-0">
+                  <span
+                    class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider"
+                  >
+                    2nd Month
+                  </span>
+                  <svg
+                    class="chevron w-5 h-5 text-wine/40"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner"
+              >
+                <div class="p-5">
+                  <a
+                    href="https://sejey0.github.io/2nd_Monthsary/"
+                    class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Open Letter &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 1st Monthsary -->
+            <div class="folder folder-color-1" data-delay="300">
+              <div
+                class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
+                onclick="toggleDrawer(this)"
+              >
+                <div class="flex items-center gap-4 min-w-0">
+                  <div class="folder-number">1</div>
+                  <div class="min-w-0">
+                    <h3
+                      class="font-body font-bold text-wine text-base sm:text-lg truncate"
+                    >
+                      1st Monthsary
+                    </h3>
+                    <p class="text-wine/50 text-xs sm:text-sm truncate">
+                      August 15, 2025
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 flex-shrink-0">
+                  <span
+                    class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider"
+                  >
+                    1st Month
+                  </span>
+                  <svg
+                    class="chevron w-5 h-5 text-wine/40"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner"
+              >
+                <div class="p-5">
+                  <a
+                    href="https://sejey0.github.io/1st_Monthsary/"
+                    class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Open Letter &rarr;
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-
-          <!-- 6th Monthsary -->
-          <div class="folder folder-color-1" data-delay="50">
-            <div
-              class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
-              onclick="toggleDrawer(this)"
-            >
-              <div class="flex items-center gap-4 min-w-0">
-                <div class="folder-number">6</div>
-                <div class="min-w-0">
-                  <h3 class="font-body font-bold text-wine text-base sm:text-lg truncate">
-                    6th Monthsary
-                  </h3>
-                  <p class="text-wine/50 text-xs sm:text-sm truncate">January 15, 2026</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-3 flex-shrink-0">
-                <span class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
-                  6th Month
-                </span>
-                <svg class="chevron w-5 h-5 text-wine/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </div>
-            </div>
-            <div class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner">
-              <div class="p-5">
-                <a
-                  href="https://sejey0.github.io/6th_Monthsary/"
-                  class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Open Letter &rarr;
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 5th Monthsary -->
-          <div class="folder folder-color-5" data-delay="100">
-            <div
-              class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
-              onclick="toggleDrawer(this)"
-            >
-              <div class="flex items-center gap-4 min-w-0">
-                <div class="folder-number">5</div>
-                <div class="min-w-0">
-                  <h3 class="font-body font-bold text-wine text-base sm:text-lg truncate">
-                    5th Monthsary
-                  </h3>
-                  <p class="text-wine/50 text-xs sm:text-sm truncate">December 15, 2025</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-3 flex-shrink-0">
-                <span class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
-                  5th + Birthday
-                </span>
-                <svg class="chevron w-5 h-5 text-wine/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </div>
-            </div>
-            <div class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner">
-              <div class="p-5">
-                <a
-                  href="https://sejey0.github.io/5th_Monthsary/"
-                  class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Open Letter &rarr;
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 4th Monthsary -->
-          <div class="folder folder-color-4" data-delay="150">
-            <div
-              class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
-              onclick="toggleDrawer(this)"
-            >
-              <div class="flex items-center gap-4 min-w-0">
-                <div class="folder-number">4</div>
-                <div class="min-w-0">
-                  <h3 class="font-body font-bold text-wine text-base sm:text-lg truncate">
-                    4th Monthsary
-                  </h3>
-                  <p class="text-wine/50 text-xs sm:text-sm truncate">November 15, 2025</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-3 flex-shrink-0">
-                <span class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
-                  4th Month
-                </span>
-                <svg class="chevron w-5 h-5 text-wine/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </div>
-            </div>
-            <div class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner">
-              <div class="p-5">
-                <a
-                  href="https://sejey0.github.io/4th_Monthsary/"
-                  class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Open Letter &rarr;
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 3rd Monthsary -->
-          <div class="folder folder-color-3" data-delay="200">
-            <div
-              class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
-              onclick="toggleDrawer(this)"
-            >
-              <div class="flex items-center gap-4 min-w-0">
-                <div class="folder-number">3</div>
-                <div class="min-w-0">
-                  <h3 class="font-body font-bold text-wine text-base sm:text-lg truncate">
-                    3rd Monthsary
-                  </h3>
-                  <p class="text-wine/50 text-xs sm:text-sm truncate">October 15, 2025</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-3 flex-shrink-0">
-                <span class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
-                  3rd Month
-                </span>
-                <svg class="chevron w-5 h-5 text-wine/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </div>
-            </div>
-            <div class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner">
-              <div class="p-5">
-                <a
-                  href="https://sejey0.github.io/3rd_Monthsary/"
-                  class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Open Letter &rarr;
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 2nd Monthsary -->
-          <div class="folder folder-color-2" data-delay="250">
-            <div
-              class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
-              onclick="toggleDrawer(this)"
-            >
-              <div class="flex items-center gap-4 min-w-0">
-                <div class="folder-number">2</div>
-                <div class="min-w-0">
-                  <h3 class="font-body font-bold text-wine text-base sm:text-lg truncate">
-                    2nd Monthsary
-                  </h3>
-                  <p class="text-wine/50 text-xs sm:text-sm truncate">September 15, 2025</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-3 flex-shrink-0">
-                <span class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
-                  2nd Month
-                </span>
-                <svg class="chevron w-5 h-5 text-wine/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </div>
-            </div>
-            <div class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner">
-              <div class="p-5">
-                <a
-                  href="https://sejey0.github.io/2nd_Monthsary/"
-                  class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Open Letter &rarr;
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 1st Monthsary -->
-          <div class="folder folder-color-1" data-delay="300">
-            <div
-              class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
-              onclick="toggleDrawer(this)"
-            >
-              <div class="flex items-center gap-4 min-w-0">
-                <div class="folder-number">1</div>
-                <div class="min-w-0">
-                  <h3 class="font-body font-bold text-wine text-base sm:text-lg truncate">
-                    1st Monthsary
-                  </h3>
-                  <p class="text-wine/50 text-xs sm:text-sm truncate">August 15, 2025</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-3 flex-shrink-0">
-                <span class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
-                  1st Month
-                </span>
-                <svg class="chevron w-5 h-5 text-wine/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </div>
-            </div>
-            <div class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner">
-              <div class="p-5">
-                <a
-                  href="https://sejey0.github.io/1st_Monthsary/"
-                  class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Open Letter &rarr;
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
         </div>
 
         <!-- Girlfriends Day sub-group -->
         <div class="letter-subgroup hidden" data-sub="girlfriends">
-        <div class="space-y-6">
-
-          <!-- 1st Girlfriends Day -->
-          <div class="folder folder-color-5" data-delay="0">
-            <div
-              class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
-              onclick="toggleDrawer(this)"
-            >
-              <div class="flex items-center gap-4 min-w-0">
-                <div class="folder-number">1</div>
-                <div class="min-w-0">
-                  <h3 class="font-body font-bold text-wine text-base sm:text-lg truncate">
-                    1st Girlfriends Day
-                  </h3>
-                  <p class="text-wine/50 text-xs sm:text-sm truncate">August 1, 2025</p>
+          <div class="space-y-6">
+            <!-- 1st Girlfriends Day -->
+            <div class="folder folder-color-5" data-delay="0">
+              <div
+                class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
+                onclick="toggleDrawer(this)"
+              >
+                <div class="flex items-center gap-4 min-w-0">
+                  <div class="folder-number">1</div>
+                  <div class="min-w-0">
+                    <h3
+                      class="font-body font-bold text-wine text-base sm:text-lg truncate"
+                    >
+                      1st Girlfriends Day
+                    </h3>
+                    <p class="text-wine/50 text-xs sm:text-sm truncate">
+                      August 1, 2025
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 flex-shrink-0">
+                  <span
+                    class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider"
+                  >
+                    Girlfriends Day
+                  </span>
+                  <svg
+                    class="chevron w-5 h-5 text-wine/40"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
                 </div>
               </div>
-              <div class="flex items-center gap-3 flex-shrink-0">
-                <span class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
-                  Girlfriends Day
-                </span>
-                <svg class="chevron w-5 h-5 text-wine/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </div>
-            </div>
-            <div class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner">
-              <div class="p-5">
-                <a
-                  href="https://sejey0.github.io/1st_Girlfriends_Day/"
-                  class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Open Letter &rarr;
-                </a>
+              <div
+                class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner"
+              >
+                <div class="p-5">
+                  <a
+                    href="https://sejey0.github.io/1st_Girlfriends_Day/"
+                    class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Open Letter &rarr;
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-
-        </div>
         </div>
 
         <!-- Anniversary sub-group -->
         <div class="letter-subgroup hidden" data-sub="anniversary">
-        <div class="space-y-6">
-
-          <!-- 1st Anniversary -->
-          <div class="folder folder-color-1" data-delay="0">
-            <div
-              class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
-              onclick="toggleDrawer(this)"
-            >
-              <div class="flex items-center gap-4 min-w-0">
-                <div class="folder-number">1</div>
-                <div class="min-w-0">
-                  <h3 class="font-body font-bold text-wine text-base sm:text-lg truncate">
-                    1st Anniversary
-                  </h3>
-                  <p class="text-wine/50 text-xs sm:text-sm truncate">July 15, 2026</p>
+          <div class="space-y-6">
+            <!-- 1st Anniversary -->
+            <div class="folder folder-color-1" data-delay="0">
+              <div
+                class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
+                onclick="toggleDrawer(this)"
+              >
+                <div class="flex items-center gap-4 min-w-0">
+                  <div class="folder-number">1</div>
+                  <div class="min-w-0">
+                    <h3
+                      class="font-body font-bold text-wine text-base sm:text-lg truncate"
+                    >
+                      1st Anniversary
+                    </h3>
+                    <p class="text-wine/50 text-xs sm:text-sm truncate">
+                      July 15, 2026
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 flex-shrink-0">
+                  <svg
+                    class="chevron w-5 h-5 text-wine/40"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
                 </div>
               </div>
-              <div class="flex items-center gap-3 flex-shrink-0">
-                <svg class="chevron w-5 h-5 text-wine/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </div>
-            </div>
-            <div class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner">
-              <div class="p-5">
-                <span
-                  class="inline-block bg-gray-300 text-gray-500 font-semibold text-sm px-6 py-2.5 rounded-full shadow-md cursor-not-allowed opacity-60"
-                >
-                  Coming Soon
-                </span>
+              <div
+                class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner"
+              >
+                <div class="p-5">
+                  <span
+                    class="inline-block bg-gray-300 text-gray-500 font-semibold text-sm px-6 py-2.5 rounded-full shadow-md cursor-not-allowed opacity-60"
+                  >
+                    Coming Soon
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-
-        </div>
         </div>
 
         <!-- Other Letters sub-group -->
         <div class="letter-subgroup hidden" data-sub="other">
-        <div class="space-y-6">
-
-          <!-- Liham -->
-          <div class="folder folder-color-4" data-delay="0">
-            <div
-              class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
-              onclick="toggleDrawer(this)"
-            >
-              <div class="flex items-center gap-4 min-w-0">
-                <div class="folder-number">2</div>
-                <div class="min-w-0">
-                  <h3 class="font-body font-bold text-wine text-base sm:text-lg truncate">
+          <div class="space-y-6">
+            <!-- Liham -->
+            <div class="folder folder-color-4" data-delay="0">
+              <div
+                class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
+                onclick="toggleDrawer(this)"
+              >
+                <div class="flex items-center gap-4 min-w-0">
+                  <div class="folder-number">2</div>
+                  <div class="min-w-0">
+                    <h3
+                      class="font-body font-bold text-wine text-base sm:text-lg truncate"
+                    >
+                      Liham
+                    </h3>
+                    <p class="text-wine/50 text-xs sm:text-sm truncate">
+                      June 14, 2025
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 flex-shrink-0">
+                  <span
+                    class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider"
+                  >
                     Liham
-                  </h3>
-                  <p class="text-wine/50 text-xs sm:text-sm truncate">June 14, 2025</p>
+                  </span>
+                  <svg
+                    class="chevron w-5 h-5 text-wine/40"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
                 </div>
               </div>
-              <div class="flex items-center gap-3 flex-shrink-0">
-                <span class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
-                  Liham
-                </span>
-                <svg class="chevron w-5 h-5 text-wine/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
+              <div
+                class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner"
+              >
+                <div class="p-5">
+                  <a
+                    href="https://sejey0.github.io/Liham/"
+                    class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Open Letter &rarr;
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner">
-              <div class="p-5">
-                <a
-                  href="https://sejey0.github.io/Liham/"
-                  class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Open Letter &rarr;
-                </a>
+
+            <!-- 1st Letter -->
+            <div class="folder folder-color-3" data-delay="50">
+              <div
+                class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
+                onclick="toggleDrawer(this)"
+              >
+                <div class="flex items-center gap-4 min-w-0">
+                  <div class="folder-number">1</div>
+                  <div class="min-w-0">
+                    <h3
+                      class="font-body font-bold text-wine text-base sm:text-lg truncate"
+                    >
+                      1st Letter
+                    </h3>
+                    <p class="text-wine/50 text-xs sm:text-sm truncate">
+                      June 4, 2025
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 flex-shrink-0">
+                  <span
+                    class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider"
+                  >
+                    The Beginning
+                  </span>
+                  <svg
+                    class="chevron w-5 h-5 text-wine/40"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner"
+              >
+                <div class="p-5">
+                  <a
+                    href="https://sejey0.github.io/1st_Letter/"
+                    class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Open Letter &rarr;
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-
-          <!-- 1st Letter -->
-          <div class="folder folder-color-3" data-delay="50">
-            <div
-              class="folder-tab rounded-xl px-5 py-4 shadow-md flex items-center justify-between gap-4"
-              onclick="toggleDrawer(this)"
-            >
-              <div class="flex items-center gap-4 min-w-0">
-                <div class="folder-number">1</div>
-                <div class="min-w-0">
-                  <h3 class="font-body font-bold text-wine text-base sm:text-lg truncate">
-                    1st Letter
-                  </h3>
-                  <p class="text-wine/50 text-xs sm:text-sm truncate">June 4, 2025</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-3 flex-shrink-0">
-                <span class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
-                  The Beginning
-                </span>
-                <svg class="chevron w-5 h-5 text-wine/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </div>
-            </div>
-            <div class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner">
-              <div class="p-5">
-                <a
-                  href="https://sejey0.github.io/1st_Letter/"
-                  class="btn-visit inline-block bg-gradient-to-r from-rosegold to-rose text-white font-semibold text-sm px-6 py-2.5 rounded-full shadow-md"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Open Letter &rarr;
-                </a>
-              </div>
-            </div>
-          </div>
-
         </div>
-        </div>
-
       </div>
 
       <!-- Anniversary Bucketlist Group (hidden by default) -->
       <div class="folder-group hidden" id="group-bucketlist">
         <div class="space-y-6">
-
           <!-- 2026 Bucketlist -->
           <div class="folder folder-color-1" data-delay="0">
             <div
@@ -1331,22 +1687,38 @@
               <div class="flex items-center gap-4 min-w-0">
                 <div class="folder-number">1</div>
                 <div class="min-w-0">
-                  <h3 class="font-body font-bold text-wine text-base sm:text-lg truncate">
+                  <h3
+                    class="font-body font-bold text-wine text-base sm:text-lg truncate"
+                  >
                     2026 Bucketlist
                   </h3>
                   <p class="text-wine/50 text-xs sm:text-sm truncate">2026</p>
                 </div>
               </div>
               <div class="flex items-center gap-3 flex-shrink-0">
-                <span class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+                <span
+                  class="hidden sm:inline-block bg-white/60 text-rosegold text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider"
+                >
                   2026
                 </span>
-                <svg class="chevron w-5 h-5 text-wine/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                <svg
+                  class="chevron w-5 h-5 text-wine/40"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </div>
             </div>
-            <div class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner">
+            <div
+              class="drawer-content bg-white/70 backdrop-blur-sm mx-2 rounded-b-xl border border-t-0 border-blush shadow-inner"
+            >
               <div class="p-5">
                 <a
                   href="#"
@@ -1359,433 +1731,885 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
 
       <!-- Gallery Group (hidden by default) -->
       <div class="folder-group hidden" id="group-gallery">
-
         <!-- Gallery sub-tab bar -->
         <div class="flex justify-center flex-wrap gap-2 mb-6">
-          <button class="sub-tab active font-body" data-gallerysub="gal-1st" onclick="switchGallerySub('gal-1st')">1st Image Together</button>
-          <button class="sub-tab font-body" data-gallerysub="gal-bataan" onclick="switchGallerySub('gal-bataan')">Bataan</button>
-          <button class="sub-tab font-body" data-gallerysub="gal-manaoag" onclick="switchGallerySub('gal-manaoag')">Manaoag</button>
-          <button class="sub-tab font-body" data-gallerysub="gal-tarlac" onclick="switchGallerySub('gal-tarlac')">Tarlac</button>
-          <button class="sub-tab font-body" data-gallerysub="gal-videocall" onclick="switchGallerySub('gal-videocall')">Video Call</button>
-          <button class="sub-tab font-body" data-gallerysub="gal-edits" onclick="switchGallerySub('gal-edits')">Edits</button>
+          <button
+            class="sub-tab active font-body"
+            data-gallerysub="gal-1st"
+            onclick="switchGallerySub('gal-1st')"
+          >
+            1st Image Together
+          </button>
+          <button
+            class="sub-tab font-body"
+            data-gallerysub="gal-bataan"
+            onclick="switchGallerySub('gal-bataan')"
+          >
+            Bataan
+          </button>
+          <button
+            class="sub-tab font-body"
+            data-gallerysub="gal-manaoag"
+            onclick="switchGallerySub('gal-manaoag')"
+          >
+            Manaoag
+          </button>
+          <button
+            class="sub-tab font-body"
+            data-gallerysub="gal-tarlac"
+            onclick="switchGallerySub('gal-tarlac')"
+          >
+            Tarlac
+          </button>
+          <button
+            class="sub-tab font-body"
+            data-gallerysub="gal-videocall"
+            onclick="switchGallerySub('gal-videocall')"
+          >
+            Video Call
+          </button>
+          <button
+            class="sub-tab font-body"
+            data-gallerysub="gal-edits"
+            onclick="switchGallerySub('gal-edits')"
+          >
+            Edits
+          </button>
         </div>
 
         <!-- 1st Image Together gallery sub-group -->
         <div class="gallery-subgroup" data-gallerysub="gal-1st">
-        <div class="gallery-grid">
-          <button class="carousel-arrow left" onclick="carouselNav(this, -1)">&#8249;</button>
-          <div class="gallery-card active-slide" onclick="openLightbox(this)">
-            <img src="images/1st Image Together/1000019984.jpg" alt="1st Image Together" />
+          <div class="gallery-grid">
+            <button class="carousel-arrow left" onclick="carouselNav(this, -1)">
+              &#8249;
+            </button>
+            <div class="gallery-card active-slide" onclick="openLightbox(this)">
+              <img
+                src="images/1st Image Together/1000019984.jpg"
+                alt="1st Image Together"
+              />
+            </div>
+            <button class="carousel-arrow right" onclick="carouselNav(this, 1)">
+              &#8250;
+            </button>
           </div>
-          <button class="carousel-arrow right" onclick="carouselNav(this, 1)">&#8250;</button>
-        </div>
-        <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">1</span></div>
+          <div class="carousel-counter">
+            <span class="current-slide">1</span> /
+            <span class="total-slides">1</span>
+          </div>
         </div>
 
         <!-- Bataan gallery sub-group -->
         <div class="gallery-subgroup hidden" data-gallerysub="gal-bataan">
-        <!-- Year tabs for Bataan -->
-        <div class="flex justify-center gap-2 mb-4">
-          <button class="sub-tab active font-body" data-yeartab="bataan-2025" onclick="switchYearTab('bataan', 'bataan-2025')">2025</button>
-          <button class="sub-tab font-body" data-yeartab="bataan-2026" onclick="switchYearTab('bataan', 'bataan-2026')">2026</button>
-        </div>
-        <!-- Bataan 2025 -->
-        <div class="year-group" data-yeargroup="bataan-2025">
-        <div class="gallery-grid">
-          <button class="carousel-arrow left" onclick="carouselNav(this, -1)">&#8249;</button>
-          <div class="gallery-card active-slide" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251014_150357_935 (1).jpg" alt="Bataan 2025" />
+          <!-- Year tabs for Bataan -->
+          <div class="flex justify-center gap-2 mb-4">
+            <button
+              class="sub-tab active font-body"
+              data-yeartab="bataan-2025"
+              onclick="switchYearTab('bataan', 'bataan-2025')"
+            >
+              2025
+            </button>
+            <button
+              class="sub-tab font-body"
+              data-yeartab="bataan-2026"
+              onclick="switchYearTab('bataan', 'bataan-2026')"
+            >
+              2026
+            </button>
           </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251014_150413_750 (1).jpg" alt="Bataan 2025" />
+          <!-- Bataan 2025 -->
+          <div class="year-group" data-yeargroup="bataan-2025">
+            <div class="gallery-grid">
+              <button
+                class="carousel-arrow left"
+                onclick="carouselNav(this, -1)"
+              >
+                &#8249;
+              </button>
+              <div
+                class="gallery-card active-slide"
+                onclick="openLightbox(this)"
+              >
+                <img
+                  src="images/Bataan/2025/IMG_20251014_150357_935 (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251014_150413_750 (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251014_150416_176.jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251014_173016_525.jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251014_173018_667.jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251014_173238_590.jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251014_173241_118.jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251014_173253_731 (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251014_173258_666.jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251014_173307_147.jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_105151_904 (1) (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_105156_781 (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_110430_401 (1) (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_110432_268 (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_163731_652 (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_164223_167 (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_164225_078 (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_164226_606 (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_164306_427 (1) (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_164308_360 (1) (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_164458_863 (1) (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_164500_235 (1) (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_164536_766 (1) (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_164542_689 (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_164836_465 (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_164902_316 (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_165008_077 (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_165347_795.jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_165558_948 (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_165640_604 (1) (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_165647_894 (1) (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_165654_237 (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_165713_247 (1) (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_165838_556.jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_165847_381 (1) (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_165908_471 (1) (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_170043_667 (1) (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251015_170052_999 (1) (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251016_113344_407 (1) (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251016_113348_177 (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251016_172338_173.jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251016_172452_850 (1) (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251016_172747_767 (1) (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251016_172844_150 (1) (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251016_174927_514 (1) (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2025/IMG_20251016_174931_298 (1).jpg"
+                  alt="Bataan 2025"
+                />
+              </div>
+              <button
+                class="carousel-arrow right"
+                onclick="carouselNav(this, 1)"
+              >
+                &#8250;
+              </button>
+            </div>
+            <div class="carousel-counter">
+              <span class="current-slide">1</span> /
+              <span class="total-slides">46</span>
+            </div>
           </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251014_150416_176.jpg" alt="Bataan 2025" />
+          <!-- Bataan 2026 -->
+          <div class="year-group hidden" data-yeargroup="bataan-2026">
+            <div class="gallery-grid">
+              <button
+                class="carousel-arrow left"
+                onclick="carouselNav(this, -1)"
+              >
+                &#8249;
+              </button>
+              <div
+                class="gallery-card active-slide"
+                onclick="openLightbox(this)"
+              >
+                <img
+                  src="images/Bataan/2026/pm_1768128388305_cmp.jpg"
+                  alt="Bataan 2026"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2026/pm_1768128393881_cmp.jpg"
+                  alt="Bataan 2026"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2026/pm_1768128394342_cmp.jpg"
+                  alt="Bataan 2026"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2026/pm_1768128397417_cmp.jpg"
+                  alt="Bataan 2026"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2026/pm_1768128397803_cmp.jpg"
+                  alt="Bataan 2026"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2026/pm_1768128399534_cmp.jpg"
+                  alt="Bataan 2026"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2026/pm_1768128399819_cmp.jpg"
+                  alt="Bataan 2026"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Bataan/2026/pm_1768128401211_cmp.jpg"
+                  alt="Bataan 2026"
+                />
+              </div>
+              <button
+                class="carousel-arrow right"
+                onclick="carouselNav(this, 1)"
+              >
+                &#8250;
+              </button>
+            </div>
+            <div class="carousel-counter">
+              <span class="current-slide">1</span> /
+              <span class="total-slides">8</span>
+            </div>
           </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251014_173016_525.jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251014_173018_667.jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251014_173238_590.jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251014_173241_118.jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251014_173253_731 (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251014_173258_666.jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251014_173307_147.jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_105151_904 (1) (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_105156_781 (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_110430_401 (1) (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_110432_268 (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_163731_652 (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_164223_167 (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_164225_078 (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_164226_606 (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_164306_427 (1) (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_164308_360 (1) (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_164458_863 (1) (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_164500_235 (1) (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_164536_766 (1) (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_164542_689 (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_164836_465 (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_164902_316 (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_165008_077 (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_165347_795.jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_165558_948 (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_165640_604 (1) (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_165647_894 (1) (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_165654_237 (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_165713_247 (1) (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_165838_556.jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_165847_381 (1) (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_165908_471 (1) (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_170043_667 (1) (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251015_170052_999 (1) (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251016_113344_407 (1) (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251016_113348_177 (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251016_172338_173.jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251016_172452_850 (1) (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251016_172747_767 (1) (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251016_172844_150 (1) (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251016_174927_514 (1) (1).jpg" alt="Bataan 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2025/IMG_20251016_174931_298 (1).jpg" alt="Bataan 2025" />
-          </div>
-          <button class="carousel-arrow right" onclick="carouselNav(this, 1)">&#8250;</button>
-        </div>
-        <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">46</span></div>
-        </div>
-        <!-- Bataan 2026 -->
-        <div class="year-group hidden" data-yeargroup="bataan-2026">
-        <div class="gallery-grid">
-          <button class="carousel-arrow left" onclick="carouselNav(this, -1)">&#8249;</button>
-          <div class="gallery-card active-slide" onclick="openLightbox(this)">
-            <img src="images/Bataan/2026/pm_1768128388305_cmp.jpg" alt="Bataan 2026" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2026/pm_1768128393881_cmp.jpg" alt="Bataan 2026" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2026/pm_1768128394342_cmp.jpg" alt="Bataan 2026" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2026/pm_1768128397417_cmp.jpg" alt="Bataan 2026" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2026/pm_1768128397803_cmp.jpg" alt="Bataan 2026" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2026/pm_1768128399534_cmp.jpg" alt="Bataan 2026" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2026/pm_1768128399819_cmp.jpg" alt="Bataan 2026" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Bataan/2026/pm_1768128401211_cmp.jpg" alt="Bataan 2026" />
-          </div>
-          <button class="carousel-arrow right" onclick="carouselNav(this, 1)">&#8250;</button>
-        </div>
-        <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">8</span></div>
-        </div>
         </div>
 
         <!-- Manaoag gallery sub-group -->
         <div class="gallery-subgroup hidden" data-gallerysub="gal-manaoag">
-        <!-- Year tabs for Manaoag -->
-        <div class="flex justify-center gap-2 mb-4">
-          <button class="sub-tab active font-body" data-yeartab="manaoag-2025" onclick="switchYearTab('manaoag', 'manaoag-2025')">2025</button>
-        </div>
-        <!-- Manaoag 2025 -->
-        <div class="year-group" data-yeargroup="manaoag-2025">
-        <div class="gallery-grid">
-          <button class="carousel-arrow left" onclick="carouselNav(this, -1)">&#8249;</button>
-          <div class="gallery-card active-slide" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/pm_1768128416038_cmp.jpg" alt="Manaoag 2025" />
+          <!-- Year tabs for Manaoag -->
+          <div class="flex justify-center gap-2 mb-4">
+            <button
+              class="sub-tab active font-body"
+              data-yeartab="manaoag-2025"
+              onclick="switchYearTab('manaoag', 'manaoag-2025')"
+            >
+              2025
+            </button>
           </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/pm_1768128416437_cmp.jpg" alt="Manaoag 2025" />
+          <!-- Manaoag 2025 -->
+          <div class="year-group" data-yeargroup="manaoag-2025">
+            <div class="gallery-grid">
+              <button
+                class="carousel-arrow left"
+                onclick="carouselNav(this, -1)"
+              >
+                &#8249;
+              </button>
+              <div
+                class="gallery-card active-slide"
+                onclick="openLightbox(this)"
+              >
+                <img
+                  src="images/Manaoag/2025/pm_1768128416038_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/pm_1768128416437_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/pm_1768128417162_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/pm_1768128419042_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/pm_1768128419866_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/pm_1768128420308_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/pm_1768128420724_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/pm_1768128422150_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/pm_1768128423235_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/pm_1768128424188_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/pm_1768128424661_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/pm_1768128425683_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/pm_1768128427916_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/pm_1768128428355_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/pm_1768128428874_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/pm_1768128429261_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/pm_1768128429605_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/images/pm_1768128416813_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/images/pm_1768128422612_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/images/pm_1768128423771_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/images/pm_1768128430120_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/images/pm_1768128430484_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/images/pm_1768128430947_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/images/pm_1768128432221_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Manaoag/2025/images/pm_1768128432722_cmp.jpg"
+                  alt="Manaoag 2025"
+                />
+              </div>
+              <button
+                class="carousel-arrow right"
+                onclick="carouselNav(this, 1)"
+              >
+                &#8250;
+              </button>
+            </div>
+            <div class="carousel-counter">
+              <span class="current-slide">1</span> /
+              <span class="total-slides">25</span>
+            </div>
           </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/pm_1768128417162_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/pm_1768128419042_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/pm_1768128419866_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/pm_1768128420308_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/pm_1768128420724_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/pm_1768128422150_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/pm_1768128423235_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/pm_1768128424188_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/pm_1768128424661_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/pm_1768128425683_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/pm_1768128427916_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/pm_1768128428355_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/pm_1768128428874_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/pm_1768128429261_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/pm_1768128429605_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/images/pm_1768128416813_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/images/pm_1768128422612_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/images/pm_1768128423771_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/images/pm_1768128430120_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/images/pm_1768128430484_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/images/pm_1768128430947_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/images/pm_1768128432221_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Manaoag/2025/images/pm_1768128432722_cmp.jpg" alt="Manaoag 2025" />
-          </div>
-          <button class="carousel-arrow right" onclick="carouselNav(this, 1)">&#8250;</button>
-        </div>
-        <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">25</span></div>
-        </div>
         </div>
 
         <!-- Tarlac gallery sub-group -->
         <div class="gallery-subgroup hidden" data-gallerysub="gal-tarlac">
-        <!-- Year tabs for Tarlac -->
-        <div class="flex justify-center gap-2 mb-4">
-          <button class="sub-tab active font-body" data-yeartab="tarlac-2025" onclick="switchYearTab('tarlac', 'tarlac-2025')">2025</button>
-        </div>
-        <!-- Tarlac 2025 -->
-        <div class="year-group" data-yeargroup="tarlac-2025">
-        <div class="gallery-grid">
-          <button class="carousel-arrow left" onclick="carouselNav(this, -1)">&#8249;</button>
-          <div class="gallery-card active-slide" onclick="openLightbox(this)">
-            <img src="images/Tarlac/2025/IMG_20250811_171107_439.jpg" alt="Tarlac 2025" />
+          <!-- Year tabs for Tarlac -->
+          <div class="flex justify-center gap-2 mb-4">
+            <button
+              class="sub-tab active font-body"
+              data-yeartab="tarlac-2025"
+              onclick="switchYearTab('tarlac', 'tarlac-2025')"
+            >
+              2025
+            </button>
           </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Tarlac/2025/IMG_20250811_171110_307.jpg" alt="Tarlac 2025" />
+          <!-- Tarlac 2025 -->
+          <div class="year-group" data-yeargroup="tarlac-2025">
+            <div class="gallery-grid">
+              <button
+                class="carousel-arrow left"
+                onclick="carouselNav(this, -1)"
+              >
+                &#8249;
+              </button>
+              <div
+                class="gallery-card active-slide"
+                onclick="openLightbox(this)"
+              >
+                <img
+                  src="images/Tarlac/2025/IMG_20250811_171107_439.jpg"
+                  alt="Tarlac 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Tarlac/2025/IMG_20250811_171110_307.jpg"
+                  alt="Tarlac 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Tarlac/2025/IMG_20250811_171117_133.jpg"
+                  alt="Tarlac 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Tarlac/2025/IMG_20251109_200530_356.jpg"
+                  alt="Tarlac 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Tarlac/2025/IMG_20251109_200541_882.jpg"
+                  alt="Tarlac 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Tarlac/2025/pm_1768128433036_cmp.jpg"
+                  alt="Tarlac 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Tarlac/2025/pm_1768128433518_cmp.jpg"
+                  alt="Tarlac 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Tarlac/2025/pm_1768128437994_cmp.jpg"
+                  alt="Tarlac 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Tarlac/2025/pm_1768128438253_cmp.jpg"
+                  alt="Tarlac 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Tarlac/2025/pm_1768128438579_cmp.jpg"
+                  alt="Tarlac 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Tarlac/2025/pm_1768128438758_cmp.jpg"
+                  alt="Tarlac 2025"
+                />
+              </div>
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img
+                  src="images/Tarlac/2025/pm_1768128438942_cmp.jpg"
+                  alt="Tarlac 2025"
+                />
+              </div>
+              <button
+                class="carousel-arrow right"
+                onclick="carouselNav(this, 1)"
+              >
+                &#8250;
+              </button>
+            </div>
+            <div class="carousel-counter">
+              <span class="current-slide">1</span> /
+              <span class="total-slides">12</span>
+            </div>
           </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Tarlac/2025/IMG_20250811_171117_133.jpg" alt="Tarlac 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Tarlac/2025/IMG_20251109_200530_356.jpg" alt="Tarlac 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Tarlac/2025/IMG_20251109_200541_882.jpg" alt="Tarlac 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Tarlac/2025/pm_1768128433036_cmp.jpg" alt="Tarlac 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Tarlac/2025/pm_1768128433518_cmp.jpg" alt="Tarlac 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Tarlac/2025/pm_1768128437994_cmp.jpg" alt="Tarlac 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Tarlac/2025/pm_1768128438253_cmp.jpg" alt="Tarlac 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Tarlac/2025/pm_1768128438579_cmp.jpg" alt="Tarlac 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Tarlac/2025/pm_1768128438758_cmp.jpg" alt="Tarlac 2025" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Tarlac/2025/pm_1768128438942_cmp.jpg" alt="Tarlac 2025" />
-          </div>
-          <button class="carousel-arrow right" onclick="carouselNav(this, 1)">&#8250;</button>
-        </div>
-        <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">12</span></div>
-        </div>
         </div>
 
         <!-- Video Call gallery sub-group -->
         <div class="gallery-subgroup hidden" data-gallerysub="gal-videocall">
-        <div class="gallery-grid">
-          <button class="carousel-arrow left" onclick="carouselNav(this, -1)">&#8249;</button>
-          <div class="gallery-card active-slide" onclick="openLightbox(this)">
-            <img src="images/Video Call/Screenshot_20250627-185513.jpg" alt="Video Call" />
+          <div class="gallery-grid">
+            <button class="carousel-arrow left" onclick="carouselNav(this, -1)">
+              &#8249;
+            </button>
+            <div class="gallery-card active-slide" onclick="openLightbox(this)">
+              <img
+                src="images/Video Call/Screenshot_20250627-185513.jpg"
+                alt="Video Call"
+              />
+            </div>
+            <div class="gallery-card" onclick="openLightbox(this)">
+              <img
+                src="images/Video Call/Screenshot_20250801-214334.jpg"
+                alt="Video Call"
+              />
+            </div>
+            <div class="gallery-card" onclick="openLightbox(this)">
+              <img
+                src="images/Video Call/Screenshot_20250801-214351.jpg"
+                alt="Video Call"
+              />
+            </div>
+            <div class="gallery-card" onclick="openLightbox(this)">
+              <img
+                src="images/Video Call/Screenshot_20250807-185007.jpg"
+                alt="Video Call"
+              />
+            </div>
+            <div class="gallery-card" onclick="openLightbox(this)">
+              <img
+                src="images/Video Call/Screenshot_20250926-210527.jpg"
+                alt="Video Call"
+              />
+            </div>
+            <div class="gallery-card" onclick="openLightbox(this)">
+              <img
+                src="images/Video Call/Screenshot_20250926-210535.jpg"
+                alt="Video Call"
+              />
+            </div>
+            <div class="gallery-card" onclick="openLightbox(this)">
+              <img
+                src="images/Video Call/Screenshot_20250927-214810.jpg"
+                alt="Video Call"
+              />
+            </div>
+            <div class="gallery-card" onclick="openLightbox(this)">
+              <img
+                src="images/Video Call/Screenshot_20251008-213029.jpg"
+                alt="Video Call"
+              />
+            </div>
+            <div class="gallery-card" onclick="openLightbox(this)">
+              <img
+                src="images/Video Call/Screenshot_20251024-212208.jpg"
+                alt="Video Call"
+              />
+            </div>
+            <button class="carousel-arrow right" onclick="carouselNav(this, 1)">
+              &#8250;
+            </button>
           </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Video Call/Screenshot_20250801-214334.jpg" alt="Video Call" />
+          <div class="carousel-counter">
+            <span class="current-slide">1</span> /
+            <span class="total-slides">9</span>
           </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Video Call/Screenshot_20250801-214351.jpg" alt="Video Call" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Video Call/Screenshot_20250807-185007.jpg" alt="Video Call" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Video Call/Screenshot_20250926-210527.jpg" alt="Video Call" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Video Call/Screenshot_20250926-210535.jpg" alt="Video Call" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Video Call/Screenshot_20250927-214810.jpg" alt="Video Call" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Video Call/Screenshot_20251008-213029.jpg" alt="Video Call" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Video Call/Screenshot_20251024-212208.jpg" alt="Video Call" />
-          </div>
-          <button class="carousel-arrow right" onclick="carouselNav(this, 1)">&#8250;</button>
-        </div>
-        <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">9</span></div>
         </div>
 
         <!-- Edits gallery sub-group -->
         <div class="gallery-subgroup hidden" data-gallerysub="gal-edits">
-        <div class="gallery-grid">
-          <button class="carousel-arrow left" onclick="carouselNav(this, -1)">&#8249;</button>
-          <div class="gallery-card active-slide" onclick="openLightbox(this)">
-            <img src="images/Edits/1.png" alt="Edit" />
+          <div class="gallery-grid">
+            <button class="carousel-arrow left" onclick="carouselNav(this, -1)">
+              &#8249;
+            </button>
+            <div class="gallery-card active-slide" onclick="openLightbox(this)">
+              <img src="images/Edits/1.png" alt="Edit" />
+            </div>
+            <div class="gallery-card" onclick="openLightbox(this)">
+              <img src="images/Edits/2.png" alt="Edit" />
+            </div>
+            <div class="gallery-card" onclick="openLightbox(this)">
+              <img
+                src="images/Edits/Aesthetic Moodboard Heart Shape Frame Photo Collage.png"
+                alt="Edit"
+              />
+            </div>
+            <div class="gallery-card" onclick="openLightbox(this)">
+              <img
+                src="images/Edits/White and Black Simple Film Collage Phone Wallpaper.png"
+                alt="Edit"
+              />
+            </div>
+            <div class="gallery-card" onclick="openLightbox(this)">
+              <img src="images/Edits/us.png" alt="Edit" />
+            </div>
+            <button class="carousel-arrow right" onclick="carouselNav(this, 1)">
+              &#8250;
+            </button>
           </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Edits/2.png" alt="Edit" />
+          <div class="carousel-counter">
+            <span class="current-slide">1</span> /
+            <span class="total-slides">5</span>
           </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Edits/Aesthetic Moodboard Heart Shape Frame Photo Collage.png" alt="Edit" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Edits/White and Black Simple Film Collage Phone Wallpaper.png" alt="Edit" />
-          </div>
-          <div class="gallery-card" onclick="openLightbox(this)">
-            <img src="images/Edits/us.png" alt="Edit" />
-          </div>
-          <button class="carousel-arrow right" onclick="carouselNav(this, 1)">&#8250;</button>
         </div>
-        <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">5</span></div>
-        </div>
-
       </div>
 
       <!-- Lightbox Modal -->
       <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-        <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+        <button class="lightbox-close" onclick="closeLightbox(event)">
+          &times;
+        </button>
         <img id="lightboxImg" src="" alt="Full size photo" />
       </div>
-
     </section>
 
     <!-- Footer -->
@@ -1830,8 +2654,12 @@
             // Autoplay might be blocked, that's ok
           });
           // Update now playing text
-          var selectedOption = document.getElementById("gateAudio").options[document.getElementById("gateAudio").selectedIndex];
-          document.getElementById("nowPlaying").textContent = selectedOption.textContent;
+          var selectedOption =
+            document.getElementById("gateAudio").options[
+              document.getElementById("gateAudio").selectedIndex
+            ];
+          document.getElementById("nowPlaying").textContent =
+            selectedOption.textContent;
           // Set play button states
           document.getElementById("btnPause").classList.add("active-play");
           document.getElementById("btnPlay").classList.remove("active-play");
@@ -1854,9 +2682,11 @@
       }
 
       // Allow Enter key to submit
-      document.getElementById("gateAnswer").addEventListener("keydown", function (e) {
-        if (e.key === "Enter") unlockGate();
-      });
+      document
+        .getElementById("gateAnswer")
+        .addEventListener("keydown", function (e) {
+          if (e.key === "Enter") unlockGate();
+        });
 
       // Toggle music controls popup
       function toggleMusicPanel() {
@@ -1914,7 +2744,8 @@
         bgAudio.play().catch(function () {});
         // Get display name from selected option
         var sel = document.getElementById("changeSongSelect");
-        document.getElementById("nowPlaying").textContent = sel.options[sel.selectedIndex].textContent;
+        document.getElementById("nowPlaying").textContent =
+          sel.options[sel.selectedIndex].textContent;
         document.getElementById("btnPause").classList.add("active-play");
         document.getElementById("btnPlay").classList.remove("active-play");
         // Reset select to placeholder
@@ -1952,7 +2783,10 @@
         var isOpen = drawer.classList.contains("open");
 
         // Close all other drawers in the same group
-        var group = folder.closest(".letter-subgroup") || folder.closest(".gallery-subgroup") || folder.closest(".folder-group");
+        var group =
+          folder.closest(".letter-subgroup") ||
+          folder.closest(".gallery-subgroup") ||
+          folder.closest(".folder-group");
         group.querySelectorAll(".drawer-content.open").forEach(function (d) {
           if (d !== drawer) {
             d.classList.remove("open");
@@ -2021,26 +2855,34 @@
       // Switch between letter sub-categories
       function switchSubCategory(sub) {
         // Update sub-tab active states (only inside letters group)
-        document.querySelectorAll("#group-letters .sub-tab").forEach(function (tab) {
-          if (tab.dataset.sub === sub) {
-            tab.classList.add("active");
-          } else {
-            tab.classList.remove("active");
-          }
-        });
+        document
+          .querySelectorAll("#group-letters .sub-tab")
+          .forEach(function (tab) {
+            if (tab.dataset.sub === sub) {
+              tab.classList.add("active");
+            } else {
+              tab.classList.remove("active");
+            }
+          });
 
         // Close all open drawers
-        document.querySelectorAll("#group-letters .drawer-content.open").forEach(function (d) {
-          d.classList.remove("open");
-          d.parentElement.querySelector(".chevron").classList.remove("rotated");
-        });
+        document
+          .querySelectorAll("#group-letters .drawer-content.open")
+          .forEach(function (d) {
+            d.classList.remove("open");
+            d.parentElement
+              .querySelector(".chevron")
+              .classList.remove("rotated");
+          });
 
         // Show/hide sub-groups
         document.querySelectorAll(".letter-subgroup").forEach(function (sg) {
           sg.classList.add("hidden");
         });
 
-        var activeSub = document.querySelector('.letter-subgroup[data-sub="' + sub + '"]');
+        var activeSub = document.querySelector(
+          '.letter-subgroup[data-sub="' + sub + '"]',
+        );
         activeSub.classList.remove("hidden");
 
         // Re-trigger folder entrance animations
@@ -2055,26 +2897,36 @@
       // Switch between gallery sub-categories
       function switchGallerySub(sub) {
         // Update gallery sub-tab active states (only top-level gallery tabs, not year tabs)
-        document.querySelectorAll("#group-gallery > .flex > .sub-tab[data-gallerysub]").forEach(function (tab) {
-          if (tab.dataset.gallerysub === sub) {
-            tab.classList.add("active");
-          } else {
-            tab.classList.remove("active");
-          }
-        });
+        document
+          .querySelectorAll(
+            "#group-gallery > .flex > .sub-tab[data-gallerysub]",
+          )
+          .forEach(function (tab) {
+            if (tab.dataset.gallerysub === sub) {
+              tab.classList.add("active");
+            } else {
+              tab.classList.remove("active");
+            }
+          });
 
         // Close all open drawers in gallery
-        document.querySelectorAll("#group-gallery .drawer-content.open").forEach(function (d) {
-          d.classList.remove("open");
-          d.parentElement.querySelector(".chevron").classList.remove("rotated");
-        });
+        document
+          .querySelectorAll("#group-gallery .drawer-content.open")
+          .forEach(function (d) {
+            d.classList.remove("open");
+            d.parentElement
+              .querySelector(".chevron")
+              .classList.remove("rotated");
+          });
 
         // Show/hide gallery sub-groups
         document.querySelectorAll(".gallery-subgroup").forEach(function (sg) {
           sg.classList.add("hidden");
         });
 
-        var activeSub = document.querySelector('.gallery-subgroup[data-gallerysub="' + sub + '"]');
+        var activeSub = document.querySelector(
+          '.gallery-subgroup[data-gallerysub="' + sub + '"]',
+        );
         activeSub.classList.remove("hidden");
 
         // Re-trigger folder entrance animations
@@ -2123,21 +2975,25 @@
       // Switch between year tabs within a location
       function switchYearTab(location, yearId) {
         // Find the parent gallery-subgroup
-        var subgroup = document.querySelector('.gallery-subgroup[data-gallerysub="gal-' + location + '"]');
+        var subgroup = document.querySelector(
+          '.gallery-subgroup[data-gallerysub="gal-' + location + '"]',
+        );
         // Update year tab active states
-        subgroup.querySelectorAll('[data-yeartab]').forEach(function (tab) {
+        subgroup.querySelectorAll("[data-yeartab]").forEach(function (tab) {
           if (tab.dataset.yeartab === yearId) {
-            tab.classList.add('active');
+            tab.classList.add("active");
           } else {
-            tab.classList.remove('active');
+            tab.classList.remove("active");
           }
         });
         // Show/hide year groups
-        subgroup.querySelectorAll('.year-group').forEach(function (g) {
-          g.classList.add('hidden');
+        subgroup.querySelectorAll(".year-group").forEach(function (g) {
+          g.classList.add("hidden");
         });
-        var activeYear = subgroup.querySelector('.year-group[data-yeargroup="' + yearId + '"]');
-        activeYear.classList.remove('hidden');
+        var activeYear = subgroup.querySelector(
+          '.year-group[data-yeargroup="' + yearId + '"]',
+        );
+        activeYear.classList.remove("hidden");
       }
 
       // Carousel navigation
@@ -2172,7 +3028,10 @@
 
       function closeLightbox(e) {
         var lightbox = document.getElementById("lightbox");
-        if (e.target === lightbox || e.target.classList.contains("lightbox-close")) {
+        if (
+          e.target === lightbox ||
+          e.target.classList.contains("lightbox-close")
+        ) {
           lightbox.classList.remove("open");
           document.body.style.overflow = "";
         }
@@ -2185,7 +3044,6 @@
           document.body.style.overflow = "";
         }
       });
-
     </script>
   </body>
 </html>
