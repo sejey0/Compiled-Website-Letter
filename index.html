@@ -557,6 +557,156 @@
         margin-bottom: 12px;
       }
 
+      /* Music Control Panel */
+      .music-panel {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 500;
+        display: none;
+      }
+      .music-panel.visible {
+        display: block;
+        animation: gateSlideUp 0.4s ease;
+      }
+      .music-toggle-btn {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #b76e79, #e8a0a0);
+        color: white;
+        border: none;
+        font-size: 1.3rem;
+        cursor: pointer;
+        box-shadow: 0 4px 20px rgba(183, 110, 121, 0.4);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .music-toggle-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 25px rgba(183, 110, 121, 0.5);
+      }
+      .music-controls {
+        position: absolute;
+        bottom: 58px;
+        right: 0;
+        background: white;
+        border-radius: 16px;
+        padding: 16px;
+        box-shadow: 0 10px 40px rgba(183, 110, 121, 0.25);
+        min-width: 220px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+      }
+      .music-controls.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .music-controls-title {
+        font-family: "Quicksand", sans-serif;
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: #b76e79;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+      .music-now-playing {
+        font-family: "Quicksand", sans-serif;
+        font-size: 0.75rem;
+        color: #722f37;
+        text-align: center;
+        margin-bottom: 12px;
+        opacity: 0.7;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .music-btn-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+      .music-btn {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 1.5px solid #f9e4e4;
+        background: white;
+        color: #b76e79;
+        font-size: 1rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+      }
+      .music-btn:hover {
+        background: #fde8e8;
+        border-color: #e8a0a0;
+      }
+      .music-btn.active-play {
+        background: linear-gradient(135deg, #b76e79, #e8a0a0);
+        color: white;
+        border-color: transparent;
+      }
+      .music-change-select {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1.5px solid #f9e4e4;
+        border-radius: 10px;
+        font-family: "Quicksand", sans-serif;
+        font-size: 0.78rem;
+        color: #722f37;
+        outline: none;
+        background: #fff8f0;
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23b76e79' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+        transition: border-color 0.3s ease;
+      }
+      .music-change-select:focus {
+        border-color: #b76e79;
+      }
+      .music-volume-row {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 12px;
+      }
+      .music-volume-row .music-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.85rem;
+        flex-shrink: 0;
+      }
+      .music-volume-bar {
+        flex: 1;
+        height: 6px;
+        border-radius: 3px;
+        background: #f9e4e4;
+        position: relative;
+        overflow: hidden;
+      }
+      .music-volume-fill {
+        height: 100%;
+        background: linear-gradient(135deg, #b76e79, #e8a0a0);
+        border-radius: 3px;
+        width: 30%;
+        transition: width 0.2s ease;
+      }
+
       /* Number badge */
       .folder-number {
         width: 36px;
@@ -613,6 +763,48 @@
 
     <!-- Background Audio -->
     <audio id="bgAudio" loop></audio>
+
+    <!-- Music Control Panel -->
+    <div class="music-panel" id="musicPanel">
+      <div class="music-controls" id="musicControls">
+        <div class="music-controls-title">Now Playing</div>
+        <div class="music-now-playing" id="nowPlaying">No music</div>
+
+        <!-- Play / Pause buttons -->
+        <div class="music-btn-row">
+          <button class="music-btn" onclick="musicVolumeChange(-0.1)" title="Volume Down">&#128265;</button>
+          <button class="music-btn" onclick="musicPause()" id="btnPlay" title="Play">&#9654;</button>
+          <button class="music-btn active-play" onclick="musicPlay()" id="btnPause" title="Pause">&#10074;&#10074;</button>
+          <button class="music-btn" onclick="musicVolumeChange(0.1)" title="Volume Up">&#128266;</button>
+        </div>
+
+        <!-- Volume bar -->
+        <div class="music-volume-row">
+          <span style="font-size:0.7rem;color:#b76e79;font-weight:600;">Vol</span>
+          <div class="music-volume-bar">
+            <div class="music-volume-fill" id="volumeFill"></div>
+          </div>
+          <span style="font-size:0.7rem;color:#b76e79;font-weight:600;" id="volumeLabel">30%</span>
+        </div>
+
+        <!-- Change song -->
+        <select class="music-change-select" id="changeSongSelect" onchange="changeSong(this.value)">
+          <option value="" disabled selected>Change song...</option>
+          <option value="audios/Adie - Tahanan (Lyrics).mp3">Adie - Tahanan</option>
+          <option value="audios/Amiel Sol - Sa Bawat Sandali (Lyrics).mp3">Amiel Sol - Sa Bawat Sandali</option>
+          <option value="audios/Be With You.mp3">Be With You</option>
+          <option value="audios/December Avenue - Saksi Ang Langit (Lyrics).mp3">December Avenue - Saksi Ang Langit</option>
+          <option value="audios/Hindi Ako Mawawala (c) El Manu (Official Lyric Video).mp3">El Manu - Hindi Ako Mawawala</option>
+          <option value="audios/Kahel Na Langit - Maki (Lyrics).mp3">Maki - Kahel Na Langit</option>
+          <option value="audios/Nahanap Kita - Amiel Sol (Official Lyric Video).mp3">Amiel Sol - Nahanap Kita</option>
+          <option value="audios/Rob Deniel - Sinta lyrics.mp3">Rob Deniel - Sinta</option>
+          <option value="audios/Simoy - Rob Deniel  100 Awit Para Kay Stella (Official Lyric Video).mp3">Rob Deniel - Simoy</option>
+          <option value="audios/Tahanan (c) El Manu [Official Audio].mp3">El Manu - Tahanan</option>
+          <option value="none">No music</option>
+        </select>
+      </div>
+      <button class="music-toggle-btn" onclick="toggleMusicPanel()" title="Music Controls">&#9835;</button>
+    </div>
 
     <!-- Floating Hearts Background -->
     <div class="hearts-bg" id="heartsBg"></div>
@@ -1643,7 +1835,24 @@
           bgAudio.play().catch(function () {
             // Autoplay might be blocked, that's ok
           });
+          // Update now playing text
+          var selectedOption = document.getElementById("gateAudio").options[document.getElementById("gateAudio").selectedIndex];
+          document.getElementById("nowPlaying").textContent = selectedOption.textContent;
+          // Set play button states
+          document.getElementById("btnPause").classList.add("active-play");
+          document.getElementById("btnPlay").classList.remove("active-play");
+        } else {
+          document.getElementById("nowPlaying").textContent = "No music";
+          document.getElementById("btnPlay").classList.remove("active-play");
+          document.getElementById("btnPause").classList.remove("active-play");
         }
+
+        // Update volume bar
+        document.getElementById("volumeFill").style.width = "30%";
+        document.getElementById("volumeLabel").textContent = "30%";
+
+        // Show music panel
+        document.getElementById("musicPanel").classList.add("visible");
 
         // Hide gate overlay
         errorEl.textContent = "";
@@ -1654,6 +1863,69 @@
       document.getElementById("gateAnswer").addEventListener("keydown", function (e) {
         if (e.key === "Enter") unlockGate();
       });
+
+      // Toggle music controls popup
+      function toggleMusicPanel() {
+        document.getElementById("musicControls").classList.toggle("open");
+      }
+
+      // Close music panel when clicking outside
+      document.addEventListener("click", function (e) {
+        var panel = document.getElementById("musicPanel");
+        if (panel && !panel.contains(e.target)) {
+          document.getElementById("musicControls").classList.remove("open");
+        }
+      });
+
+      // Play music
+      function musicPlay() {
+        var bgAudio = document.getElementById("bgAudio");
+        if (bgAudio.src) {
+          bgAudio.play().catch(function () {});
+          document.getElementById("btnPlay").classList.add("active-play");
+          document.getElementById("btnPause").classList.remove("active-play");
+        }
+      }
+
+      // Pause music
+      function musicPause() {
+        var bgAudio = document.getElementById("bgAudio");
+        bgAudio.pause();
+        document.getElementById("btnPause").classList.add("active-play");
+        document.getElementById("btnPlay").classList.remove("active-play");
+      }
+
+      // Volume up/down
+      function musicVolumeChange(delta) {
+        var bgAudio = document.getElementById("bgAudio");
+        var newVol = Math.min(1, Math.max(0, bgAudio.volume + delta));
+        bgAudio.volume = Math.round(newVol * 10) / 10;
+        var pct = Math.round(bgAudio.volume * 100);
+        document.getElementById("volumeFill").style.width = pct + "%";
+        document.getElementById("volumeLabel").textContent = pct + "%";
+      }
+
+      // Change song
+      function changeSong(value) {
+        var bgAudio = document.getElementById("bgAudio");
+        if (value === "none") {
+          bgAudio.pause();
+          bgAudio.src = "";
+          document.getElementById("nowPlaying").textContent = "No music";
+          document.getElementById("btnPlay").classList.remove("active-play");
+          document.getElementById("btnPause").classList.remove("active-play");
+          return;
+        }
+        bgAudio.src = value;
+        bgAudio.play().catch(function () {});
+        // Get display name from selected option
+        var sel = document.getElementById("changeSongSelect");
+        document.getElementById("nowPlaying").textContent = sel.options[sel.selectedIndex].textContent;
+        document.getElementById("btnPlay").classList.add("active-play");
+        document.getElementById("btnPause").classList.remove("active-play");
+        // Reset select to placeholder
+        sel.selectedIndex = 0;
+      }
 
       // Floating hearts background
       (function createHearts() {
